@@ -30,4 +30,6 @@ antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
 # Get dotfiles in place using Stow
 stow nvim
 stow zsh
+stow wezterm
+stow tmux
 
