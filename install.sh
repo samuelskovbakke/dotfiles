@@ -6,6 +6,7 @@ curl -L https://nixos.org/nix/install | sh
 
 nix-env -iA \
   nixpkgs.zsh \
+  nixpkgs.wezterm \
   nixpkgs.antibody \
   nixpkgs.git \
   nixpkgs.neovim \
