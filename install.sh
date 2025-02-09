@@ -1,36 +1,39 @@
-# install nix
-curl -L https://nixos.org/nix/install | sh
+# This script install packages and stores dotfiles on the system (Arch+Hyprland)
 
-# source nix
-. ~/.nix-profile/etc/profile.d/nix.sh
+sudo pacman -Syyu
 
-nix-env -iA \
-  nixpkgs.zsh \
-  nixpkgs.wezterm \
-  nixpkgs.antibody \
-  nixpkgs.git \
-  nixpkgs.neovim \
-  nixpkgs.tmux \
-  nixpkgs.stow \
-  nixpkgs.fzf \
-  nixpkgs.zoxide \
-  nixpkgs.ripgrep \
-  nixpkgs.bat \
-  nixpkgs.thefuck \
-  nixpkgs.eza
+sudo pacman -S --needed base-devel
 
-# add zsh to valid login shells
-command -v zsh | sudo tee -a /etc/shell
+sudo pacman -S zsh ghostty fastfetch git neovim neovide tmux stow fzf zoxide ripgrep bat thefuck eza zip unzip unrar xarchiver xdg-utils \
+celluloid okular fd htop tldr wget lshw thunar  \
+cmake gcc rust ruby python jdk-openjdk npm \
+font-manager ttf-firacode-nerd ttf-font-awesome noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra wqy-zenhei \
+waybar hyprpaper hyprlock swaync pipewire pipewire-pulse swappy grim wl-clipboard slurp wofi network-manager-applet wtype wl-mirror \
+firefox
 
-# use zsh as default shell
-sudo chsh -s $(which zsh) $USER
+# Install yay and AUR packages
+git clone https://aur.archlinux.org/yay.git ~
+cd ~/yay
+makepkg -si
+cd .dotfiles
+rm -rf ~/yay
 
-# bundle zsh plugins
-antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
+yay -S wlogout wttrbar waypipe 
 
 # Get dotfiles in place using Stow
-stow nvim
-stow zsh
-stow wezterm
-stow tmux
+cp .stow-global-ignore ~/
+stow .
+
+# Add zsh to valid login shells
+command -v zsh | sudo tee -a /etc/shell
+
+# Use zsh as default shell
+sudo chsh -s $(which zsh) $USER
+
+# Bundle zsh plugins
+curl -sfL git.io/antibody | sudo sh -s - -b /usr/local/bin
+antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
+
+# Setup tmux plugin
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
