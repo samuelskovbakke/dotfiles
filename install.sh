@@ -21,7 +21,6 @@ rm -rf ~/yay
 yay -S wlogout wttrbar waypipe 
 
 # Get dotfiles in place using Stow
-cp .stow-global-ignore ~/
 stow .
 
 # Add zsh to valid login shells
