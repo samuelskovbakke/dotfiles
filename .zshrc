@@ -47,6 +47,10 @@ setopt hist_verify
 bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
 
+# Make ctrl+arrow to jump words work
+bindkey '^[[1;5D' backward-word
+bindkey '^[[1;5C' forward-word
+
 # ---- FZF -----
 
 # Set up fzf key bindings and fuzzy completion
