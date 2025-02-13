@@ -1,0 +1,11 @@
+{
+    "AllowOnlyFirst": false,
+    "Brightness": 100,
+    "EffectClassName": "RainbowWave",
+    "FPS": 60,
+    "RandomColors": false,
+    "Slider2Val": 16,
+    "Speed": 7,
+    "Temperature": 0,
+    "Tint": 0
+}
