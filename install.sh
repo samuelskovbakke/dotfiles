@@ -8,7 +8,7 @@ sudo pacman -S zsh ghostty fastfetch git neovim neovide tmux stow fzf zoxide rip
 celluloid okular fd htop tldr wget lshw thunar thunar-archive-plugin \
 cmake gcc rust ruby python python-pip jdk-openjdk npm luarocks \
 font-manager ttf-firacode-nerd ttf-font-awesome noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra wqy-zenhei \
-waybar hyprpaper hyprlock swaync pipewire pipewire-pulse swappy grim wl-clipboard slurp wofi network-manager-applet wtype wl-mirror \
+waybar hyprlock swaync pipewire pipewire-pulse swappy grim wl-clipboard slurp wofi network-manager-applet wtype wl-mirror \
 firefox openrgb
 
 # Install yay and AUR packages
@@ -36,3 +36,9 @@ antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
 # Setup tmux plugin
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
+
+# Setup JaKooLit Arch-Hyprland
+git clone --depth=1 https://github.com/JaKooLit/Arch-Hyprland.git ~/Arch-Hyprland
+cd ~/Arch-Hyprland
+chmod +x install.sh
+./install.sh

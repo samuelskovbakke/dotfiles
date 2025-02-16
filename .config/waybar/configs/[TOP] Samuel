@@ -1,0 +1,41 @@
+// ### TOP Samuel ## //
+
+{
+"include": [
+  "$HOME/.config/waybar/Modules",
+  "$HOME/.config/waybar/ModulesWorkspaces",
+  "$HOME/.config/waybar/ModulesCustom",
+  "$HOME/.config/waybar/ModulesGroups",
+  ],
+"layer": "top", 
+"position": "top", 
+//"mode": "dock",
+"exclusive": true,
+"passthrough": false,
+"gtk-layer-shell": true,
+"margin-left": 6,
+"margin-right": 6,
+"margin-top": 2,
+
+"modules-left": [	
+  "custom/weather",
+	"group/mobo_drawer",
+	"hyprland/workspaces#rw",
+	"tray",
+	"mpris", 
+	],
+    
+"modules-center": [
+	"clock#custom",
+	"custom/swaync",
+  "custom/updater",
+	],
+    
+"modules-right": [
+	"hyprland/window",  
+	"battery",
+ 	"group/audio", 
+	"custom/power",
+	],
+}
+
