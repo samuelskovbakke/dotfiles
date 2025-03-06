@@ -1,0 +1,66 @@
+    OpenRGB v0.9
+    Commit:  from 
+    Launched: 20250306_161403
+====================================================================================================
+
+0     |Info:    Found file: samuel.orp attempting to validate header
+0     |Info:    Valid v4 profile found for samuel
+1001  |Info:    ------------------------------------------------------
+1001  |Info:    |               Start device detection               |
+1001  |Info:    ------------------------------------------------------
+1001  |Info:    Initializing HID interfaces: Success
+1010  |Info:    ------------------------------------------------------
+1010  |Info:    |             Detecting I2C interfaces               |
+1010  |Info:    ------------------------------------------------------
+1010  |Info:    Registering I2C interface: /dev/i2c-3 Device 10DE:2783 Subsystem: 19DA:5710
+1010  |Info:    Registering I2C interface: /dev/i2c-10 Device 1022:790B Subsystem: 1043:8877
+1010  |Info:    Registering I2C interface: /dev/i2c-1 Device 10DE:2783 Subsystem: 19DA:5710
+1010  |Info:    Registering I2C interface: /dev/i2c-8 Device 1002:164E Subsystem: 1043:8877
+1010  |Info:    Registering I2C interface: /dev/i2c-6 Device 10DE:2783 Subsystem: 19DA:5710
+1010  |Info:    Registering I2C interface: /dev/i2c-4 Device 10DE:2783 Subsystem: 19DA:5710
+1010  |Info:    Registering I2C interface: /dev/i2c-11 Device 1022:790B Subsystem: 1043:8877
+1011  |Info:    Registering I2C interface: /dev/i2c-2 Device 10DE:2783 Subsystem: 19DA:5710
+1011  |Info:    Registering I2C interface: /dev/i2c-0 Device 0000:0000 Subsystem: 0000:0000
+1011  |Warning: [i2c_smbus_linux] Failed to read i2c device PCI device ID
+1011  |Info:    Registering I2C interface: /dev/i2c-9 Device 0000:0000 Subsystem: 0000:0000
+1011  |Info:    Registering I2C interface: /dev/i2c-7 Device 1002:164E Subsystem: 1043:8877
+1011  |Info:    Registering I2C interface: /dev/i2c-5 Device 10DE:2783 Subsystem: 19DA:5710
+1011  |Info:    Registering I2C interface: /dev/i2c-12 Device 1022:790B Subsystem: 1043:8877
+1011  |Info:    ------------------------------------------------------
+1011  |Info:    |               Detecting I2C devices                |
+1011  |Info:    ------------------------------------------------------
+1634  |Info:    [Corsair Dominator Platinum] Registering RGB controller
+1656  |Info:    [Corsair Dominator Platinum] Registering RGB controller
+2060  |Info:    ------------------------------------------------------
+2060  |Info:    |               Detecting I2C PCI devices            |
+2060  |Info:    ------------------------------------------------------
+2060  |Info:    ------------------------------------------------------
+2060  |Info:    |               Detecting HID devices                |
+2060  |Info:    ------------------------------------------------------
+67735 |Info:    [Corsair Commander Core] Registering RGB controller
+79420 |Info:    [Corsair K100] Registering RGB controller
+79505 |Info:    [ASUS ROG STRIX X670E-A GAMING WIFI] Registering RGB controller
+79505 |Info:    ------------------------------------------------------
+79505 |Info:    |            Detecting libusb HID devices            |
+79505 |Info:    ------------------------------------------------------
+79946 |Info:    ------------------------------------------------------
+79946 |Info:    |              Detecting other devices               |
+79946 |Info:    ------------------------------------------------------
+79954 |Info:    ------------------------------------------------------
+79954 |Info:    |                Detection completed                 |
+79954 |Info:    ------------------------------------------------------
+79954 |Info:    Profile loading: FAILED! for Corsair Dominator Platinum @ I2C: /dev/i2c-10, address 0x18
+79954 |Info:    Profile loading: FAILED! for Corsair Dominator Platinum @ I2C: /dev/i2c-10, address 0x1A
+79954 |Info:    Profile loading: Succeeded for Corsair Commander Core @ HID: /dev/hidraw12
+79954 |Info:    Profile loading: Succeeded for Corsair K100 @ HID: /dev/hidraw7
+79954 |Info:    Profile loading: Succeeded for ASUS ROG STRIX X670E-A GAMING WIFI @ HID: /dev/hidraw10
+87711 |Info:    Profile loading: FAILED! for Corsair Dominator Platinum @ I2C: /dev/i2c-10, address 0x18
+87711 |Info:    Profile loading: FAILED! for Corsair Dominator Platinum @ I2C: /dev/i2c-10, address 0x1A
+87711 |Info:    Profile loading: Succeeded for Corsair Commander Core @ HID: /dev/hidraw12
+87711 |Info:    Profile loading: Succeeded for Corsair K100 @ HID: /dev/hidraw7
+87711 |Info:    Profile loading: Succeeded for ASUS ROG STRIX X670E-A GAMING WIFI @ HID: /dev/hidraw10
+87966 |Info:    Profile loading: FAILED! for Corsair Dominator Platinum @ I2C: /dev/i2c-10, address 0x18
+87966 |Info:    Profile loading: FAILED! for Corsair Dominator Platinum @ I2C: /dev/i2c-10, address 0x1A
+87966 |Info:    Profile loading: Succeeded for Corsair Commander Core @ HID: /dev/hidraw12
+87966 |Info:    Profile loading: Succeeded for Corsair K100 @ HID: /dev/hidraw7
+87966 |Info:    Profile loading: Succeeded for ASUS ROG STRIX X670E-A GAMING WIFI @ HID: /dev/hidraw10

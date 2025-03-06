@@ -12,6 +12,7 @@ plugins=(
     zsh-syntax-highlighting
     tmux
     you-should-use
+    command-not-found
 )
 
 #ZSH_TMUX_AUTOSTART=true
@@ -57,3 +58,8 @@ bindkey '^[[1;5C' forward-word
 
 
 source ~/.my-aliases.zsh
+
+source /usr/share/doc/pkgfile/command-not-found.zsh
+
+eval $(thefuck --alias)
+eval $(thefuck --alias fk)

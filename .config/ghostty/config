@@ -46,7 +46,8 @@ theme = catppuccin-macchiato
 shell-integration = zsh
 cursor-style = bar
 
-font-family = "FiraCode Nerd Font Mono"
+font-family = "Fira Code SemiBold"
 font-size = 12
 
-
+background-opacity = 0.7
+background-blur = true
