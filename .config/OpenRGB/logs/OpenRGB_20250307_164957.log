@@ -1,0 +1,50 @@
+    OpenRGB v0.9
+    Commit:  from 
+    Launched: 20250307_164957
+====================================================================================================
+
+0     |Info:    Found file: samuel.orp attempting to validate header
+0     |Info:    Valid v4 profile found for samuel
+1003  |Info:    ------------------------------------------------------
+1003  |Info:    |               Start device detection               |
+1003  |Info:    ------------------------------------------------------
+1004  |Info:    Initializing HID interfaces: Success
+1005  |Info:    ------------------------------------------------------
+1005  |Info:    |             Detecting I2C interfaces               |
+1005  |Info:    ------------------------------------------------------
+1005  |Info:    Registering I2C interface: /dev/i2c-3 Device 8086:9BC4 Subsystem: 1558:50F3
+1006  |Info:    Registering I2C interface: /dev/i2c-10 Device 8086:06A3 Subsystem: 1558:50F3
+1006  |Info:    Registering I2C interface: /dev/i2c-1 Device 10DE:2520 Subsystem: 1558:50F3
+1006  |Warning: [i2c_smbus_linux] Failed to read i2c device PCI device ID
+1006  |Info:    Registering I2C interface: /dev/i2c-8 Device 0000:0000 Subsystem: 0000:0000
+1006  |Info:    Registering I2C interface: /dev/i2c-6 Device 8086:9BC4 Subsystem: 1558:50F3
+1006  |Info:    Registering I2C interface: /dev/i2c-ELAN0412:00 Device 0000:0000 Subsystem: 0000:0000
+1007  |Info:    Registering I2C interface: /dev/i2c-11 Device 0000:0000 Subsystem: 0000:0000
+1007  |Info:    Registering I2C interface: /dev/i2c-2 Device 10DE:2520 Subsystem: 1558:50F3
+1007  |Info:    Registering I2C interface: /dev/i2c-0 Device 10DE:2520 Subsystem: 1558:50F3
+1007  |Warning: [i2c_smbus_linux] Failed to read i2c device PCI device ID
+1007  |Info:    Registering I2C interface: /dev/i2c-9 Device 0000:0000 Subsystem: 0000:0000
+1007  |Info:    Registering I2C interface: /dev/i2c-ANX7411:01 Device 0000:0000 Subsystem: 0000:0000
+1008  |Warning: [i2c_smbus_linux] Failed to read i2c device PCI device ID
+1008  |Info:    Registering I2C interface: /dev/i2c-7 Device 0000:0000 Subsystem: 0000:0000
+1008  |Info:    Registering I2C interface: /dev/i2c-5 Device 8086:9BC4 Subsystem: 1558:50F3
+1008  |Info:    Registering I2C interface: /dev/i2c-12 Device 0000:0000 Subsystem: 0000:0000
+1008  |Info:    ------------------------------------------------------
+1008  |Info:    |               Detecting I2C devices                |
+1008  |Info:    ------------------------------------------------------
+1466  |Info:    ------------------------------------------------------
+1466  |Info:    |               Detecting I2C PCI devices            |
+1466  |Info:    ------------------------------------------------------
+1468  |Info:    ------------------------------------------------------
+1468  |Info:    |               Detecting HID devices                |
+1468  |Info:    ------------------------------------------------------
+1468  |Info:    ------------------------------------------------------
+1468  |Info:    |            Detecting libusb HID devices            |
+1468  |Info:    ------------------------------------------------------
+1474  |Info:    ------------------------------------------------------
+1474  |Info:    |              Detecting other devices               |
+1474  |Info:    ------------------------------------------------------
+1479  |Info:    ------------------------------------------------------
+1479  |Info:    |                Detection completed                 |
+1479  |Info:    ------------------------------------------------------
+1479  |Dialog:  <h2>WARNING:</h2><p>One or more I2C/SMBus interfaces failed to initialize.</p><p>RGB DRAM modules and some motherboards' onboard RGB lighting will not be available without I2C/SMBus.</p><p>On Linux, this is usually because the i2c-dev module is not loaded.  You must load the i2c-dev module along with the correct i2c driver for your motherboard.  This is usually i2c-piix4 for AMD systems and i2c-i801 for Intel systems.</p><p>See <a href='https://help.openrgb.org/'>help.openrgb.org</a> for additional troubleshooting steps if you keep seeing this message.<br></p>

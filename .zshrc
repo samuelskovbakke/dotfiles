@@ -1,5 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+#autoload -Uz compinit
+#compinit
 
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -10,7 +12,7 @@ plugins=(
     archlinux
     zsh-autosuggestions
     zsh-syntax-highlighting
-    tmux
+    # tmux
     you-should-use
     command-not-found
 )
@@ -38,7 +40,9 @@ alias lt='eza -a --tree --level=1 --icons'
 alias reload-zsh="source ~/.zshrc"
 alias edit-zsh="nvim ~/.zshrc"
 
-
+# Zoxide Setop
+eval "$(zoxide init zsh)"
+alias cd="z"
 
 # Set-up FZF key bindings (CTRL R for fuzzy history finder)
 source <(fzf --zsh)

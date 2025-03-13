@@ -9,11 +9,11 @@ sudo pacman -S stow
 stow .
 
 sudo pacman -S zsh ghostty fastfetch git neovim neovide tmux fzf zoxide ripgrep bat thefuck eza zip unzip unrar xarchiver xdg-utils \
-celluloid okular fd htop tldr wget lshw thunar thunar-archive-plugin \
-cmake gcc rust python python-pip python-neovim jdk-openjdk npm luarocks go php \
-font-manager ttf-firacode-nerd ttf-font-awesome noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra wqy-zenhei \
-waybar hyprlock swaync pipewire pipewire-pulse swappy grim wl-clipboard slurp wofi network-manager-applet wtype wl-mirror \
-firefox openrgb
+  celluloid okular fd htop tldr wget lshw thunar thunar-archive-plugin \
+  cmake gcc rust python python-pip python-neovim jdk-openjdk npm luarocks go php \
+  font-manager ttf-firacode-nerd ttf-font-awesome noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra wqy-zenhei \
+  waybar hyprlock swaync pipewire pipewire-pulse swappy grim wl-clipboard slurp wofi network-manager-applet wtype wl-mirror \
+  firefox openrgb
 
 sudo pacman -R dolphin
 
@@ -21,13 +21,13 @@ sudo pacman -R dolphin
 git clone https://aur.archlinux.org/yay.git ~
 cd ~/yay
 makepkg -si
-cd .dotfiles
+cd ~/.dotfiles
 rm -rf ~/yay
 
-yay -S wlogout wttrbar waypipe 
+yay -S wlogout wttrbar waypipe rose-pine-cursor rose-pine-hyprcursor
 
 # Get dotfiles in place using Stow
-stow .
+#stow .
 
 # Add zsh to valid login shells
 command -v zsh | sudo tee -a /etc/shell

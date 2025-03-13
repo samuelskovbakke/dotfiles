@@ -19,10 +19,8 @@
 
 "modules-left": [	
   "custom/weather",
-	"group/mobo_drawer",
 	"hyprland/workspaces#rw",
-	"tray",
-	"mpris", 
+	"hyprland/window",  
 	],
     
 "modules-center": [
@@ -32,7 +30,7 @@
 	],
     
 "modules-right": [
-	"hyprland/window",  
+	"tray",
 	"battery",
  	"group/audio", 
 	"custom/power",
