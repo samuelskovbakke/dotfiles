@@ -21,7 +21,7 @@ sudo pacman -R dolphin
 git clone https://aur.archlinux.org/yay.git ~
 cd ~/yay
 makepkg -si
-cd .dotfiles
+cd ~/.dotfiles
 rm -rf ~/yay
 
 yay -S wlogout wttrbar waypipe 
