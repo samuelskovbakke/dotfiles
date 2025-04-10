@@ -7,6 +7,7 @@
   "$HOME/.config/waybar/ModulesWorkspaces",
   "$HOME/.config/waybar/ModulesCustom",
   "$HOME/.config/waybar/ModulesGroups",
+  "$HOME/.config/waybar/UserModules",
   ],
 "layer": "top",
 //"mode": "dock",
@@ -26,7 +27,6 @@
 	"tray",
 	"custom/separator#blank",
 	"clock",
-	"custom/playerctl",
 	"custom/separator#blank_2",
 	"hyprland/window",
 	],
@@ -36,7 +36,7 @@
 	"custom/separator#dot-line",
 	"hyprland/workspaces#rw",
 	"custom/separator#dot-line",
-	"custom/swaync",	
+	"group/notify",	
 	],
 
 "modules-right": [
@@ -45,7 +45,9 @@
 	"group/mobo_drawer",
 	"custom/separator#line",  
 	"group/audio",
-	"custom/separator#dot-line", 
+	"custom/separator#dot-line",
+	"mpris",
+	"custom/separator#blank", 
 	"group/status",
 	],
 }

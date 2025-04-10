@@ -1,37 +1,32 @@
 /* ---- 💫 https://github.com/JaKooLit 💫 ---- */
-/* Main Config 1440p */
+/* Ja KooLit - Default 
 
-@import "~/.config/rofi/master-config.rasi" 
+* All main themes or configs are located in ~/.config/rofi/themes/
+* If you want to edit the config, that is where you should edit NOT here 
 
-/* ---- Window ---- */
-window {
-  width:	50%;
-}
+* To load a new theme, manually edit the file path below or choose desired theme via rofi theme selector (choose via app menu)
 
-/* ---- Mode Switcher ---- */
-button {
-  width:	110px;
-}
+* Alternative way to Load (preferred) own cooked by Ja 
+* SUPER CTRL R - Choose style & SUPER CTRL SHIFT R 
 
-/* ---- Listview ---- */
-listview {
-  columns: 5;
-  lines: 5;
-  fixed-height:	true;
-}
+* TIPS 
+* If you have edited a config, rename it with a unique name. During update, the contents of 
+* ~/.config/rofi/themes/ will be replaced. */
 
-/* ---- Element ---- */
-element {
-  orientation: vertical;
-  padding: 10px 5px 10px 5px;
-  spacing: 6px;
-}
+/* ---- Global Configuration Fonts ---- */
+@import "~/.config/rofi/0-shared-fonts.rasi"
 
-element-icon {
-  size: 3%;
-}
+/* note: Main themes in ~/.config/rofi/themes */
+/* You can manually change here or you can use rofi theme selector SUPER SHIFT E */
 
-element-text {
-  font: "JetBrainsMono Nerd Font SemiBold 12";
-  horizontal-align: 0.5;
-}
+
+//@theme "~/.config/rofi/themes/KooL_style-9.rasi"
+//@theme "~/.config/rofi/themes/KooL_style-10-Fancy.rasi"
+//@theme "~/.config/rofi/themes/KooL_style-10-Fancy-v2.rasi"
+//@theme "~/.config/rofi/themes/KooL_style-11-Win11-list-dark.rasi"
+//@theme "~/.config/rofi/themes/KooL_style-12-TOP-Docu.rasi"
+//@theme "~/.config/rofi/themes/KooL_style-13-Vertical.rasi"
+//@theme "~/.config/rofi/themes/KooL_style-14.rasi"
+//@theme "~/.config/rofi/themes/KooL_style-15-solarized.rasi"
+//@theme "~/.config/rofi/themes/KooL_style-7.rasi"
+@theme "~/.config/rofi/themes/KooL_style-8.rasi"

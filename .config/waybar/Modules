@@ -125,56 +125,51 @@
 },
 
 "clock#2": {
-  //"format": " {:%I:%M %p}", // AM PM format
-  "format": "  {:%H:%M}", // 24H
-  "format-alt": "{:%A  |  %H:%M  |  %e %B}",
-  "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    //"format": " {:%I:%M %p}", // AM PM format
+    "format": "  {:%H:%M}", // 24H
+    "format-alt": "{:%A  |  %H:%M  |  %e %B}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
 },
 
 "clock#3": {
-  //"format": "{:%I:%M %p - %d/%b}", //for AM/PM
-  "format": "{:%H:%M - %d/%b}", // 24H
+    //"format": "{:%I:%M %p - %d/%b}", //for AM/PM
+    "format": "{:%H:%M - %d/%b}", // 24H
 	"tooltip": false
 },
 
 "clock#4": {
 	"interval": 60,
-  //"format": "{:%B | %a %d, %Y | %I:%M %p}", // AM PM format
-  "format": "{:%B | %a %d, %Y | %H:%M}", // 24H
+    //"format": "{:%B | %a %d, %Y | %I:%M %p}", // AM PM format
+    "format": "{:%B | %a %d, %Y | %H:%M}", // 24H
 	"format-alt": "{:%a %b %d, %G}",
 	"tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
 },
 
 "clock#5": {
-  //"format": "{:%A, %I:%M %P}", // AM PM format
-  "format": "{:%a %d | %H:%M}", // 24H
+    //"format": "{:%A, %I:%M %P}", // AM PM format
+    "format": "{:%a %d | %H:%M}", // 24H
 	"format-alt": "{:%A, %d %B, %Y (%R)}",
 	"tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
 },
 
-"clock#custom": {
-  "format": " {:%R   %d/%m}",
-  "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
-},
-
 "cpu": {
-"format": "{usage}% 󰍛",
-"interval": 1,
-"min-length": 5,
-"format-alt-click": "click",
-"format-alt": "{icon0}{icon1}{icon2}{icon3} {usage:>2}% 󰍛",
-"format-icons": [
-  "▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"
-],
-"on-click-right": "gnome-system-monitor",
+	"format": "{usage}% 󰍛",
+	"interval": 1,
+	"min-length": 5,
+	"format-alt-click": "click",
+	"format-alt": "{icon0}{icon1}{icon2}{icon3} {usage:>2}% 󰍛",
+	"format-icons": [
+		"▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"
+	],
+	"on-click-right": "gnome-system-monitor",
 },
 
 "disk": {
-"interval": 30,
-//"format": "󰋊",
-"path": "/",
-//"format-alt-click": "click",
-"format": "{percentage_used}% 󰋊",
+	"interval": 30,
+	//"format": "󰋊",
+	"path": "/",
+	//"format-alt-click": "click",
+	"format": "{percentage_used}% 󰋊",
 	//"tooltip": true,
 	"tooltip-format": "{used} used out of {total} on {path} ({percentage_used}%)",
 },
@@ -251,6 +246,8 @@
 	"on-scroll-up": "$HOME/.config/hypr/scripts/Volume.sh --inc",
 	"on-scroll-down": "$HOME/.config/hypr/scripts/Volume.sh --dec",
 	"smooth-scrolling-threshold": 1,
+	"tooltip": true,
+	"tooltip-format": "{status_icon} {dynamic}\nLeft Click: previous\nMid Click: Pause\nRight Click: Next",
 	"player-icons": {
 		"chromium": "",
 		"default": "",
