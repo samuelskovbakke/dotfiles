@@ -152,6 +152,11 @@
 	"tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
 },
 
+"clock": {
+  "format": " {:%R   %d/%m}",
+  "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+},
+
 "cpu": {
 	"format": "{usage}% 󰍛",
 	"interval": 1,
