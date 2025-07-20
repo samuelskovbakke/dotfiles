@@ -1,0 +1,62 @@
+    OpenRGB v0.9
+    Commit:  from 
+    Launched: 20250219_160737
+====================================================================================================
+
+0     |Info:    Found file: samuel.orp attempting to validate header
+0     |Info:    Valid v4 profile found for samuel
+1004  |Info:    ------------------------------------------------------
+1004  |Info:    |               Start device detection               |
+1004  |Info:    ------------------------------------------------------
+1004  |Info:    Initializing HID interfaces: Success
+1013  |Info:    ------------------------------------------------------
+1013  |Info:    |             Detecting I2C interfaces               |
+1013  |Info:    ------------------------------------------------------
+1013  |Info:    Registering I2C interface: /dev/i2c-3 Device 10DE:2783 Subsystem: 19DA:5710
+1013  |Info:    Registering I2C interface: /dev/i2c-10 Device 1022:790B Subsystem: 1043:8877
+1013  |Info:    Registering I2C interface: /dev/i2c-1 Device 10DE:2783 Subsystem: 19DA:5710
+1013  |Info:    Registering I2C interface: /dev/i2c-8 Device 1002:164E Subsystem: 1043:8877
+1013  |Info:    Registering I2C interface: /dev/i2c-6 Device 10DE:2783 Subsystem: 19DA:5710
+1013  |Info:    Registering I2C interface: /dev/i2c-4 Device 10DE:2783 Subsystem: 19DA:5710
+1013  |Info:    Registering I2C interface: /dev/i2c-11 Device 1022:790B Subsystem: 1043:8877
+1013  |Info:    Registering I2C interface: /dev/i2c-2 Device 10DE:2783 Subsystem: 19DA:5710
+1013  |Info:    Registering I2C interface: /dev/i2c-0 Device 0000:0000 Subsystem: 0000:0000
+1013  |Warning: [i2c_smbus_linux] Failed to read i2c device PCI device ID
+1013  |Info:    Registering I2C interface: /dev/i2c-9 Device 0000:0000 Subsystem: 0000:0000
+1013  |Info:    Registering I2C interface: /dev/i2c-7 Device 1002:164E Subsystem: 1043:8877
+1013  |Info:    Registering I2C interface: /dev/i2c-5 Device 10DE:2783 Subsystem: 19DA:5710
+1013  |Info:    Registering I2C interface: /dev/i2c-12 Device 1022:790B Subsystem: 1043:8877
+1013  |Info:    ------------------------------------------------------
+1013  |Info:    |               Detecting I2C devices                |
+1013  |Info:    ------------------------------------------------------
+2055  |Info:    ------------------------------------------------------
+2055  |Info:    |               Detecting I2C PCI devices            |
+2055  |Info:    ------------------------------------------------------
+2055  |Info:    ------------------------------------------------------
+2055  |Info:    |               Detecting HID devices                |
+2055  |Info:    ------------------------------------------------------
+2290  |Info:    [Corsair Commander Core] Registering RGB controller
+2645  |Info:    Unable add this Logitech device: Not Connected
+2999  |Info:    Unable add this Logitech device: Not Connected
+3353  |Info:    Unable add this Logitech device: Not Connected
+3707  |Info:    Unable add this Logitech device: Not Connected
+4061  |Info:    Unable add this Logitech device: Not Connected
+4415  |Info:    Unable add this Logitech device: Not Connected
+4769  |Info:    Unable add this Logitech device: Not Connected
+5123  |Info:    Unable add this Logitech device: Not Connected
+5477  |Info:    Unable add this Logitech device: Not Connected
+5831  |Info:    Unable add this Logitech device: Not Connected
+5887  |Info:    [Corsair K100] Registering RGB controller
+5964  |Info:    [ASUS ROG STRIX X670E-A GAMING WIFI] Registering RGB controller
+5964  |Info:    ------------------------------------------------------
+5964  |Info:    |            Detecting libusb HID devices            |
+5964  |Info:    ------------------------------------------------------
+6193  |Info:    ------------------------------------------------------
+6193  |Info:    |              Detecting other devices               |
+6193  |Info:    ------------------------------------------------------
+6201  |Info:    ------------------------------------------------------
+6201  |Info:    |                Detection completed                 |
+6201  |Info:    ------------------------------------------------------
+6201  |Info:    Profile loading: Succeeded for Corsair Commander Core @ HID: /dev/hidraw11
+6201  |Info:    Profile loading: Succeeded for Corsair K100 @ HID: /dev/hidraw7
+6201  |Info:    Profile loading: Succeeded for ASUS ROG STRIX X670E-A GAMING WIFI @ HID: /dev/hidraw10

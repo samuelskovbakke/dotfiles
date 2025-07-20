@@ -1,0 +1,94 @@
+    OpenRGB v0.9
+    Commit:  from 
+    Launched: 20250304_182715
+====================================================================================================
+
+0     |Info:    Found file: samuel.orp attempting to validate header
+1     |Info:    Valid v4 profile found for samuel
+1006  |Info:    ------------------------------------------------------
+1006  |Info:    |               Start device detection               |
+1006  |Info:    ------------------------------------------------------
+1006  |Info:    Initializing HID interfaces: Success
+1014  |Info:    ------------------------------------------------------
+1014  |Info:    |             Detecting I2C interfaces               |
+1014  |Info:    ------------------------------------------------------
+1014  |Info:    Registering I2C interface: /dev/i2c-3 Device 10DE:2783 Subsystem: 19DA:5710
+1014  |Info:    Registering I2C interface: /dev/i2c-10 Device 1022:790B Subsystem: 1043:8877
+1015  |Info:    Registering I2C interface: /dev/i2c-1 Device 10DE:2783 Subsystem: 19DA:5710
+1015  |Info:    Registering I2C interface: /dev/i2c-8 Device 1002:164E Subsystem: 1043:8877
+1015  |Info:    Registering I2C interface: /dev/i2c-6 Device 10DE:2783 Subsystem: 19DA:5710
+1015  |Info:    Registering I2C interface: /dev/i2c-4 Device 10DE:2783 Subsystem: 19DA:5710
+1015  |Info:    Registering I2C interface: /dev/i2c-11 Device 1022:790B Subsystem: 1043:8877
+1015  |Info:    Registering I2C interface: /dev/i2c-2 Device 10DE:2783 Subsystem: 19DA:5710
+1015  |Info:    Registering I2C interface: /dev/i2c-0 Device 0000:0000 Subsystem: 0000:0000
+1015  |Warning: [i2c_smbus_linux] Failed to read i2c device PCI device ID
+1015  |Info:    Registering I2C interface: /dev/i2c-9 Device 0000:0000 Subsystem: 0000:0000
+1015  |Info:    Registering I2C interface: /dev/i2c-7 Device 1002:164E Subsystem: 1043:8877
+1015  |Info:    Registering I2C interface: /dev/i2c-5 Device 10DE:2783 Subsystem: 19DA:5710
+1015  |Info:    Registering I2C interface: /dev/i2c-12 Device 1022:790B Subsystem: 1043:8877
+1015  |Info:    ------------------------------------------------------
+1015  |Info:    |               Detecting I2C devices                |
+1015  |Info:    ------------------------------------------------------
+1644  |Info:    [Corsair Dominator Platinum] Registering RGB controller
+1667  |Info:    [Corsair Dominator Platinum] Registering RGB controller
+2069  |Info:    ------------------------------------------------------
+2069  |Info:    |               Detecting I2C PCI devices            |
+2069  |Info:    ------------------------------------------------------
+2070  |Info:    ------------------------------------------------------
+2070  |Info:    |               Detecting HID devices                |
+2070  |Info:    ------------------------------------------------------
+2326  |Info:    [Corsair Commander Core] Registering RGB controller
+3281  |Info:    [G502 LIGHTSPEED Wireless Gaming Mouse] Registering RGB controller
+3336  |Info:    [Corsair K100] Registering RGB controller
+3421  |Info:    [ASUS ROG STRIX X670E-A GAMING WIFI] Registering RGB controller
+3421  |Info:    ------------------------------------------------------
+3421  |Info:    |            Detecting libusb HID devices            |
+3421  |Info:    ------------------------------------------------------
+3650  |Info:    ------------------------------------------------------
+3650  |Info:    |              Detecting other devices               |
+3650  |Info:    ------------------------------------------------------
+3659  |Info:    ------------------------------------------------------
+3659  |Info:    |                Detection completed                 |
+3659  |Info:    ------------------------------------------------------
+3659  |Info:    Profile loading: FAILED! for Corsair Dominator Platinum @ I2C: /dev/i2c-10, address 0x18
+3659  |Info:    Profile loading: FAILED! for Corsair Dominator Platinum @ I2C: /dev/i2c-10, address 0x1A
+3659  |Info:    Profile loading: Succeeded for Corsair Commander Core @ HID: /dev/hidraw11
+3659  |Info:    Profile loading: Succeeded for G502 LIGHTSPEED Wireless Gaming Mouse @ HID: /dev/hidraw13 (Receiver) 
+Wireless Index: 255
+3659  |Info:    Profile loading: Succeeded for Corsair K100 @ HID: /dev/hidraw7
+3659  |Info:    Profile loading: Succeeded for ASUS ROG STRIX X670E-A GAMING WIFI @ HID: /dev/hidraw10
+60863 |Info:    Profile loading: FAILED! for Corsair Dominator Platinum @ I2C: /dev/i2c-10, address 0x18
+60863 |Info:    Profile loading: FAILED! for Corsair Dominator Platinum @ I2C: /dev/i2c-10, address 0x1A
+60863 |Info:    Profile loading: Succeeded for Corsair Commander Core @ HID: /dev/hidraw11
+60863 |Info:    Profile loading: Succeeded for G502 LIGHTSPEED Wireless Gaming Mouse @ HID: /dev/hidraw13 (Receiver) 
+Wireless Index: 255
+60863 |Info:    Profile loading: Succeeded for Corsair K100 @ HID: /dev/hidraw7
+60863 |Info:    Profile loading: Succeeded for ASUS ROG STRIX X670E-A GAMING WIFI @ HID: /dev/hidraw10
+63388 |Info:    Profile loading: FAILED! for Corsair Dominator Platinum @ I2C: /dev/i2c-10, address 0x18
+63388 |Info:    Profile loading: FAILED! for Corsair Dominator Platinum @ I2C: /dev/i2c-10, address 0x1A
+63388 |Info:    Profile loading: Succeeded for Corsair Commander Core @ HID: /dev/hidraw11
+63388 |Info:    Profile loading: Succeeded for G502 LIGHTSPEED Wireless Gaming Mouse @ HID: /dev/hidraw13 (Receiver) 
+Wireless Index: 255
+63388 |Info:    Profile loading: Succeeded for Corsair K100 @ HID: /dev/hidraw7
+63388 |Info:    Profile loading: Succeeded for ASUS ROG STRIX X670E-A GAMING WIFI @ HID: /dev/hidraw10
+68751 |Info:    Profile loading: FAILED! for Corsair Dominator Platinum @ I2C: /dev/i2c-10, address 0x18
+68751 |Info:    Profile loading: FAILED! for Corsair Dominator Platinum @ I2C: /dev/i2c-10, address 0x1A
+68751 |Info:    Profile loading: Succeeded for Corsair Commander Core @ HID: /dev/hidraw11
+68751 |Info:    Profile loading: Succeeded for G502 LIGHTSPEED Wireless Gaming Mouse @ HID: /dev/hidraw13 (Receiver) 
+Wireless Index: 255
+68751 |Info:    Profile loading: Succeeded for Corsair K100 @ HID: /dev/hidraw7
+68751 |Info:    Profile loading: Succeeded for ASUS ROG STRIX X670E-A GAMING WIFI @ HID: /dev/hidraw10
+109942|Info:    Profile loading: FAILED! for Corsair Dominator Platinum @ I2C: /dev/i2c-10, address 0x18
+109942|Info:    Profile loading: FAILED! for Corsair Dominator Platinum @ I2C: /dev/i2c-10, address 0x1A
+109942|Info:    Profile loading: Succeeded for Corsair Commander Core @ HID: /dev/hidraw11
+109942|Info:    Profile loading: Succeeded for G502 LIGHTSPEED Wireless Gaming Mouse @ HID: /dev/hidraw13 (Receiver) 
+Wireless Index: 255
+109942|Info:    Profile loading: Succeeded for Corsair K100 @ HID: /dev/hidraw7
+109942|Info:    Profile loading: Succeeded for ASUS ROG STRIX X670E-A GAMING WIFI @ HID: /dev/hidraw10
+110196|Info:    Profile loading: FAILED! for Corsair Dominator Platinum @ I2C: /dev/i2c-10, address 0x18
+110196|Info:    Profile loading: FAILED! for Corsair Dominator Platinum @ I2C: /dev/i2c-10, address 0x1A
+110196|Info:    Profile loading: Succeeded for Corsair Commander Core @ HID: /dev/hidraw11
+110196|Info:    Profile loading: Succeeded for G502 LIGHTSPEED Wireless Gaming Mouse @ HID: /dev/hidraw13 (Receiver) 
+Wireless Index: 255
+110196|Info:    Profile loading: Succeeded for Corsair K100 @ HID: /dev/hidraw7
+110196|Info:    Profile loading: Succeeded for ASUS ROG STRIX X670E-A GAMING WIFI @ HID: /dev/hidraw10
