@@ -7,6 +7,7 @@
   "$HOME/.config/waybar/ModulesWorkspaces",
   "$HOME/.config/waybar/ModulesCustom",
   "$HOME/.config/waybar/ModulesGroups",
+  "$HOME/.config/waybar/UserModules",
   ],
 "layer": "top",
 //"mode": "dock",
@@ -32,7 +33,7 @@
 	],
 
 "modules-center": [
-	"custom/swaync",
+	"group/notify",
 	"custom/cava_mviz",
 	"custom/separator#dot-line",
 	"clock",

@@ -1265,6 +1265,11 @@
                 "description": "Provides a variety of custom effects",
                 "enabled": true,
                 "name": "OpenRGB Effects Plugin"
+            },
+            {
+                "description": "Sync colors with hardware measures",
+                "enabled": true,
+                "name": "Hardware Sync"
             }
         ]
     },

@@ -1,9 +1,9 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # /* ---- 💫 https://github.com/JaKooLit 💫 ---- */
 # /* Calculator (using qalculate) and rofi */
 # /* Submitted by: https://github.com/JosephArmas */
 
-rofi_config="$HOME/.config/rofi/config-calc.rasi"
+rofi_theme="$HOME/.config/rofi/config-calc.rasi"
 
 # Kill Rofi if already running before execution
 if pgrep -x "rofi" >/dev/null; then
@@ -15,7 +15,7 @@ fi
 while true; do
     result=$(
         rofi -i -dmenu \
-            -config "$rofi_config" \
+            -config $rofi_theme \
             -mesg "$result      =    $calc_result"
     )
 

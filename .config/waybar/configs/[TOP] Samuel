@@ -18,22 +18,18 @@
 "margin-top": 2,
 
 "modules-left": [	
-  "custom/weather",
-	"group/mobo_drawer",
 	"hyprland/workspaces#rw",
-	"tray",
-	"mpris", 
+	"hyprland/window", 
 	],
     
 "modules-center": [
 	"clock#custom",
 	"custom/swaync",
-  "custom/updater",
+  "custom/weather",
 	],
     
 "modules-right": [
-	"hyprland/window",  
-	"battery",
+	"tray",
  	"group/audio", 
 	"custom/power",
 	],

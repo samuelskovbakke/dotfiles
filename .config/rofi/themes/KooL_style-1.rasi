@@ -1,22 +1,20 @@
 /* ---- 💫 https://github.com/JaKooLit 💫 ---- */
-/* Master Config 1440p*/
+/* KooL Hyprland Rofi Style 1 */
 
 /* ---- Configuration ---- */
 
 configuration {
-    font:                       "JetBrainsMono Nerd Font SemiBold 12";
     modi:                       "drun,run,filebrowser";
     show-icons:                 true;
-    display-drun:               "Apps";
-    display-run:                "Run";
-    display-filebrowser:        "Files";
-    display-window:             "Windows";
+    display-drun:               "  apps";
+    display-run:                "  term";
+    display-filebrowser:        "  files";
+    display-window:             "  window";
     drun-display-format:        "{name}";
+    window-format:              "{w} · {c} · {t}";
     hover-select:               true;
     me-select-entry:            "MouseSecondary";
     me-accept-entry:            "MousePrimary";
-    window-format:              "{w} · {c} · {t}";
-    dpi:						1;
 }
 
 /* ---- Load wallust colors ---- */
@@ -24,11 +22,10 @@ configuration {
 
 /* ---- Global Properties ---- */
 * {
-
-    background-alt:              @selected-active-background; // Buttons background
-    selected:                    @selected-urgent-background; // Button selected
-    active:                      @selected-normal-background; // Window activated
-    urgent:                      @selected; // When hovering the activated window (maybe more?)
+    background-alt:              @color1;
+    selected:                    @color12;
+    active:                      @color11;
+    urgent:                      red;
 
     text-selected:               @background;
     text-color:                  @foreground;
@@ -82,10 +79,10 @@ entry {
     width:                       20%;
     padding:                     10px;
     border-radius:               12px;
-    background-color:            @selected;
+    background-color:            @active;
     text-color:                  @text-selected;
     cursor:                      text;
-    placeholder:                 " 🖥️ Search "; // << Search symbol
+    placeholder:                 " 🖥️ Search ";
     placeholder-color:           inherit;
 }
 
@@ -101,17 +98,19 @@ listbox {
 /* ---- Listview ---- */
 listview {
     enabled:                     true;
-    columns:                     2;
-    lines:                       6;
+    columns:                     5;
+    lines:                       5;
     cycle:                       true;
     dynamic:                     true;
     scrollbar:                   true;
     layout:                      vertical;
     reverse:                     false;
-    fixed-height:                false;
+    fixed-height:                true;
     fixed-columns:               true;    
     spacing:                     10px;
     background-color:            transparent;
+    margin: 					 10px;
+    text-color:					 @foreground;
 
 //  Adapt rofi theme
     border:                      0px;
@@ -144,8 +143,10 @@ button selected {
 
 /* ---- Scrollbar ---- */
 scrollbar {
-    border:       				0;
-    handle-color: 				@background-alt;
+    border:       				0px;
+    border-radius:				10px;
+    border-color:				@color12;
+    handle-color: 				@color11;
     handle-width: 				2px ;
     padding:      				0;
 }
@@ -153,13 +154,15 @@ scrollbar {
 /* ---- Elements ---- */
 element {
     enabled:                     true;
-    spacing:                     10px;
+    orientation: 				 vertical;
   	padding: 					 10px;
+  	spacing: 					 10px;
     border-radius:               12px;
     background-color:            transparent;
     cursor:                      pointer;
 }
 
+element-text selected,
 element normal.normal {
     background-color:            inherit;
     text-color:                  inherit;
@@ -176,9 +179,9 @@ element normal.active {
 element selected.normal {
     border:                      0px 3px 0px 3px;
     border-radius:               16px;
-    border-color:                @selected;
+    border-color:                @active;
     background-color:            transparent;
-    text-color:                  @background-alt;
+    text-color:                  @selected;
 }
 
 element selected.urgent {
@@ -203,17 +206,18 @@ element alternate.active {
     text-color:                  inherit;
 }
 element-icon {
+  	size: 						 3%;
     background-color:            transparent;
     text-color:                  inherit;
     cursor:                      inherit;
 }
 element-text {
-    font:						"JetBrainsMono Nerd Font SemiBold 14";
+	size:						 1%;
     background-color:            transparent;
     text-color:                  inherit;
     cursor:                      inherit;
     vertical-align:              0.5;
-    horizontal-align:            0.0;
+    horizontal-align:            0.5;
 }
 
 /* ---- Message ---- */
@@ -222,16 +226,17 @@ message {
     border:                      0px;
 }
 textbox {
+	margin: 10px;
     padding:                     12px;
     border-radius:               10px;
-    background-color:            @background-alt;
-    text-color:                  @background;
+    background-color:            @active;
+    text-color:                  @foreground;
     vertical-align:              0.5;
-    horizontal-align:            0.0;
+    horizontal-align:            0.5;
 }
 error-message {
     padding:                     12px;
     border-radius:               20px;
-    background-color:            @background-alt;
-    text-color:                  @background;
+    background-color:            @background;
+    text-color:                  @foreground;
 }

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  #
 # Wallpaper Effects using ImageMagick (SUPER SHIFT W)
 
@@ -7,7 +7,8 @@ terminal=kitty
 wallpaper_current="$HOME/.config/hypr/wallpaper_effects/.wallpaper_current"
 wallpaper_output="$HOME/.config/hypr/wallpaper_effects/.wallpaper_modified"
 SCRIPTSDIR="$HOME/.config/hypr/scripts"
-focused_monitor=$(hyprctl monitors | awk '/^Monitor/{name=$2} /focused: yes/{print name}')
+focused_monitor=$(hyprctl monitors -j | jq -r '.[] | select(.focused) | .name')
+rofi_theme="$HOME/.config/rofi/config-wallpaper-effect.rasi"
 
 # Directory for swaync
 iDIR="$HOME/.config/swaync/images"
@@ -18,7 +19,7 @@ FPS=60
 TYPE="wipe"
 DURATION=2
 BEZIER=".43,1.19,1,.4"
-SWWW_PARAMS="--transition-fps $FPS --transition-type $TYPE --transition-duration $DURATION"
+SWWW_PARAMS="--transition-fps $FPS --transition-type $TYPE --transition-duration $DURATION --transition-bezier $BEZIER"
 
 # Define ImageMagick effects
 declare -A effects=(
@@ -45,9 +46,7 @@ declare -A effects=(
 # Function to apply no effects
 no-effects() {
     swww img -o "$focused_monitor" "$wallpaper_current" $SWWW_PARAMS &&
-    # Wait for swww command to complete
     wait $!
-    # Run other commands after swww
     wallust run "$wallpaper_current" -s &&
     wait $!
     # Refresh rofi, waybar, wallust palettes
@@ -67,7 +66,7 @@ main() {
         [[ "$effect" != "No Effects" ]] && options+=("$effect")
     done
 
-    choice=$(printf "%s\n" "${options[@]}" | LC_COLLATE=C sort | rofi -dmenu -i -config ~/.config/rofi/config-wallpaper-effect.rasi)
+    choice=$(printf "%s\n" "${options[@]}" | LC_COLLATE=C sort | rofi -dmenu -i -config $rofi_theme)
 
     # Process user choice
     if [[ -n "$choice" ]]; then
@@ -77,16 +76,14 @@ main() {
             # Apply selected effect
             notify-send -u normal -i "$iDIR/ja.png"  "Applying:" "$choice effects"
             eval "${effects[$choice]}"
-            # Wait for effects to be applied
+
             sleep 1
-            # Execute swww command after image conversion
             swww img -o "$focused_monitor" "$wallpaper_output" $SWWW_PARAMS &
-            # Wait for swww command to complete
+
             sleep 2
-            # Wait for other commands to finish
+  
             wallust run "$wallpaper_output" -s &
-            # Wait for other commands to finish
-            sleep 0.5
+            sleep 1
             # Refresh rofi, waybar, wallust palettes
             "${SCRIPTSDIR}/Refresh.sh"
             notify-send -u low -i "$iDIR/ja.png" "$choice" "effects applied"
@@ -104,28 +101,35 @@ fi
 main
 
 sleep 1
-# Check if user selected a wallpaper
-if [[ -n "$choice" ]]; then
-    sddm_sequoia="/usr/share/sddm/themes/sequoia_2"
-    if [ -d "$sddm_sequoia" ]; then
-        notify-send -i "$iDIR/ja.png" "Set wallpaper" "as SDDM background?" \
-            -t 10000 \
-            -A "yes=Yes" \
-            -A "no=No" \
-            -h string:x-canonical-private-synchronous:wallpaper-notify
 
-        # Wait for user input using dbus-monitor
-        dbus-monitor "interface='org.freedesktop.Notifications',member='ActionInvoked'" |
-        while read -r line; do
-          if echo "$line" | grep -q "yes"; then
-            $terminal -e bash -c "echo 'Enter your password to set wallpaper as SDDM Background'; \
-            sudo cp -r $wallpaper_output '$sddm_sequoia/backgrounds/default' && \
-            notify-send -i '$iDIR/ja.png' 'SDDM' 'Background SET'"
-            break
-          elif echo "$line" | grep -q "no"; then
-            echo "Wallpaper not set as SDDM background. Exiting."
-            break
-          fi
-        done &
+if [[ -n "$choice" ]]; then
+  sddm_sequoia="/usr/share/sddm/themes/sequoia_2"
+  if [ -d "$sddm_sequoia" ]; then
+  
+	# Check if yad is running to avoid multiple yad notification
+	if pidof yad > /dev/null; then
+	  killall yad
+	fi
+	
+	if yad --info --text="Set current wallpaper as SDDM background?\n\nNOTE: This only applies to SEQUOIA SDDM Theme" \
+    --text-align=left \
+    --title="SDDM Background" \
+    --timeout=5 \
+    --timeout-indicator=right \
+    --button="yad-yes:0" \
+    --button="yad-no:1" \
+    ; then
+
+    # Check if terminal exists
+    if ! command -v "$terminal" &>/dev/null; then
+    notify-send -i "$iDIR/ja.png" "Missing $terminal" "Install $terminal to enable setting of wallpaper background"
+    exit 1
     fi
+
+      # Open terminal and set the wallpaper
+    $terminal -e bash -c "echo 'Enter your password to set wallpaper as SDDM Background'; \
+    sudo cp -r $wallpaper_output '$sddm_sequoia/backgrounds/default' && \
+    notify-send -i '$iDIR/ja.png' 'SDDM' 'Background SET'"
+    fi
+  fi
 fi

@@ -7,6 +7,7 @@
   "$HOME/.config/waybar/ModulesWorkspaces",
   "$HOME/.config/waybar/ModulesCustom",
   "$HOME/.config/waybar/ModulesGroups",
+  "$HOME/.config/waybar/UserModules",
   ],
 "layer": "top",
 //"mode": "dock",
@@ -52,7 +53,7 @@
 "modules-right": [
 	"network#speed",
 	"custom/separator#dot-line",
-	"custom/swaync",
+	"group/notify",
 	"tray",
 	"mpris", 
 	"custom/separator#dot-line",

@@ -1,10 +1,10 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  ##
 # Rofi menu for Quick Edit/View of Settings (SUPER E)
 
 # Define preferred text editor and terminal
 edit=${EDITOR:-nano}
-tty=kitty
+tty=ghostty
 
 # Paths to configuration directories
 configs="$HOME/.config/hypr/configs"

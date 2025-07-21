@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  ##
 # For disabling touchpad.
 # Edit the Touchpad_Device on ~/.config/hypr/UserConfigs/Laptops.conf according to your system
@@ -10,19 +10,19 @@ notif="$HOME/.config/swaync/images/ja.png"
 export STATUS_FILE="$XDG_RUNTIME_DIR/touchpad.status"
 
 enable_touchpad() {
-    printf "true" >"$STATUS_FILE"
-    notify-send -u low -i $notif  " Enabling" " touchpad"
-    hyprctl keyword '$TOUCHPAD_ENABLED' "true" -r
+  printf "true" >"$STATUS_FILE"
+  notify-send --hint int:transient:1 -t 1000 -u low -i $notif " Enabling" " touchpad"
+  hyprctl keyword '$TOUCHPAD_ENABLED' "true" -r
 }
 
 disable_touchpad() {
-    printf "false" >"$STATUS_FILE"
-    notify-send -u low -i $notif " Disabling" " touchpad"
-    hyprctl keyword '$TOUCHPAD_ENABLED' "false" -r
+  printf "false" >"$STATUS_FILE"
+  notify-send --hint int:transient:1 -t 1000 -u low -i $notif " Disabling" " touchpad"
+  hyprctl keyword '$TOUCHPAD_ENABLED' "false" -r
 }
 
 if ! [ -f "$STATUS_FILE" ]; then
-  enable_touchpad
+  disable_touchpad
 else
   if [ $(cat "$STATUS_FILE") = "true" ]; then
     disable_touchpad
