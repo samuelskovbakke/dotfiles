@@ -53,6 +53,6 @@ compdef _dirs d
 # alias ll='ls -lh'
 # alias la='ls -lAh'
 
-alias nrs='sudo nixos-rebuild switch --flake ~/nix-config'
-alias nixupg='nix flake update && nix flake update home-manager && sudo nixos-rebuild switch --flake ~/nix-config'
-alias nixdelgens='sudo nix-collect-garbage -d'
+alias nrs='sudo nixos-rebuild switch --impure --flake ~/nix-config'
+alias nixupg='nix flake update --flake ~/nix-config && nix flake update home-manager --flake ~/nix-config && sudo nixos-rebuild switch --impure --flake ~/nix-config'
+alias nixdelgens='sudo nix-collect-garbage -d && nix-collect-garbage -d'
