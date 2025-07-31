@@ -78,7 +78,7 @@
     "keyColor": "green"
     },
     {
-            "type": "display",
+    "type": "display",
     "key": "│ ├󰍹",
     "keyColor": "green",
     "compactType": "original-with-refresh-rate"
@@ -95,12 +95,7 @@
     },
     {
     "type": "uptime",
-    "key": "│ ├󰅐",
-    "keyColor": "green"
-    },
-    {
-    "type": "display",
-    "key": "│ └󰍹",
+    "key": "│ └󰅐",
     "keyColor": "green"
     },
     {
