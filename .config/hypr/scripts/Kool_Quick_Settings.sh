@@ -32,6 +32,7 @@ view/edit Decorations
 view/edit Animations
 view/edit Laptop Keybinds
 view/edit Default Keybinds
+view/edit Nix Config
 Configure Monitors (nwg-displays)
 Configure Workspace Rules (nwg-displays)
 Choose Hyprland Animations
@@ -59,6 +60,9 @@ main() {
         "view/edit Animations") file="$UserConfigs/UserAnimations.conf" ;;
         "view/edit Laptop Keybinds") file="$UserConfigs/Laptops.conf" ;;
         "view/edit Default Keybinds") file="$configs/Keybinds.conf" ;;
+
+        "view/edit Nix Config") file="$HOME/nix-config/" ;;
+
         "Configure Monitors (nwg-displays)") 
             if ! command -v nwg-displays &>/dev/null; then
                 notify-send -i "$iDIR/ja.png" "E-R-R-O-R" "Install nwg-displays first"
