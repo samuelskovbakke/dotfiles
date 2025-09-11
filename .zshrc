@@ -63,6 +63,9 @@ bindkey '^[[B' history-search-forward
 bindkey '^[[1;5D' backward-word
 bindkey '^[[1;5C' forward-word
 
+# Make alt+arrow to jump words work
+bindkey '^[[1;3D' backward-word
+bindkey '^[[1;3C' forward-word
 
 source ~/.my-aliases.zsh
 

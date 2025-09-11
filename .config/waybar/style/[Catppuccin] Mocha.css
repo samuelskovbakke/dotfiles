@@ -13,34 +13,34 @@
 @import "../waybar/style/catppuccin-themes/mocha.css";
 
 window#waybar {
-  	transition-property: background-color;
-  	transition-duration: 0.5s;
-  	background: transparent;
-  	border-radius: 10px;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  background: transparent;
+  border-radius: 10px;
 }
 
 window#waybar.hidden {
-  	opacity: 0.2;
+  opacity: 0.2;
 }
 
 window#waybar.empty,
 window#waybar.empty #window {
-    background-color: transparent;
-    padding: 0px;
-    border: 0px;
+  background-color: transparent;
+  padding: 0px;
+  border: 0px;
 }
 
 #taskbar button,
 #workspaces button {
 	color: @overlay1;
-    box-shadow: none;
+  box-shadow: none;
 	text-shadow: none;
-    padding: 0px;
-    border-radius: 9px;
-    padding-left: 4px;
-    padding-right: 4px;
-    animation: gradient_f 20s ease-in infinite;
-    transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
+  padding: 0px;
+  border-radius: 9px;
+  padding-left: 4px;
+  padding-right: 4px;
+  animation: gradient_f 20s ease-in infinite;
+  transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
 }
 
 #taskbar button:hover,
@@ -49,9 +49,9 @@ window#waybar.empty #window {
 	color: @peach;
 	background-color: @surface0;
  	padding-left: 2px;
-    padding-right: 2px;
-    animation: gradient_f 20s ease-in infinite;
-    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+  padding-right: 2px;
+  animation: gradient_f 20s ease-in infinite;
+  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
 }
 
 #workspaces button.persistent {
