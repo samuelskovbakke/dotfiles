@@ -18,7 +18,6 @@
 "margin-top": 2,
 
 "modules-left": [	
-  "custom/weather",
 	"hyprland/workspaces#rw",
 	"hyprland/window",  
 	],
@@ -26,13 +25,13 @@
 "modules-center": [
 	"clock#custom",
 	"custom/swaync",
-  "custom/updater",
+  "custom/weather"
 	],
     
 "modules-right": [
 	"tray",
-	"battery",
  	"group/audio", 
+	"battery",
 	"custom/power",
 	],
 }

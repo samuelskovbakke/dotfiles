@@ -11,7 +11,6 @@ alias yay="yay --noconfirm"
 alias give-me-upgrade="sudo pacman --noconfirm -Syyuu && yay"
 alias grep="rg"
 alias ff="fastfetch"
-alias tmux="TERM=tmux-256color tmux"
 
 # Changing/making/removing directory
 setopt auto_cd
@@ -46,10 +45,14 @@ function d () {
     dirs -v | head -n 10
   fi
 }
-#compdef _dirs d
+compdef _dirs d
 
 # List directory contents
 # alias lsa='ls -lah'
 # alias l='ls -lah'
 # alias ll='ls -lh'
 # alias la='ls -lAh'
+
+alias nrs='sudo nixos-rebuild switch --impure --flake ~/nix-config && home-manager switch --impure --flake ~/nix-config'
+alias nixupg='nix flake update --flake ~/nix-config && home-manager switch --impure --flake ~/nix-config && sudo nixos-rebuild switch --impure --flake ~/nix-config'
+alias nixdelgens='sudo nix-collect-garbage -d && nix-collect-garbage -d'
