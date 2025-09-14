@@ -9,6 +9,7 @@ fi
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
@@ -63,6 +64,9 @@ bindkey '^[[B' history-search-forward
 bindkey '^[[1;5D' backward-word
 bindkey '^[[1;5C' forward-word
 
+# Delete word with ctrl+backspace
+bindkey '^H' backward-kill-word
+
 # Make alt+arrow to jump words work
 bindkey '^[[1;3D' backward-word
 bindkey '^[[1;3C' forward-word
@@ -75,6 +79,6 @@ eval "$(pay-respects zsh --alias)"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.dotfiles/.p10k.zsh.
-[[ ! -f ~/.dotfiles/.p10k.zsh ]] || source ~/.dotfiles/.p10k.zsh
+[[ ! -f ~/dotfiles/.p10k.zsh ]] || source ~/dotfiles/.p10k.zsh
 
 eval "$(zoxide init zsh)"
