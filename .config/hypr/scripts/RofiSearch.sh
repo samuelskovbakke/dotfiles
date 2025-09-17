@@ -20,7 +20,7 @@ if pgrep -x "rofi" >/dev/null; then
 fi
 
 # Open Rofi and pass the selected query to xdg-open for Google search
-echo "" | rofi -dmenu -config "$rofi_theme" -mesg "$msg" | xargs -I{} xdg-open $Search_Engine
+echo "" | rofi -dmenu -config "$rofi_theme" | xargs -I{} xdg-open $Search_Engine
 
 # Clean up temporary file after sourcing
 rm "$tmp_config_file"
