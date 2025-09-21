@@ -43,8 +43,8 @@
 # resize-overlay-duration = 4s 200ms
 
 # theme = catppuccin-macchiato
-# theme = catppuccin-mocha
-theme = tokyonight-storm
+theme = Catppuccin Mocha
+# theme = TokyoNight Storm
 shell-integration = zsh
 cursor-style = bar
 

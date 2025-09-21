@@ -1,24 +1,53 @@
-/* ---- 💫 https://github.com/JaKooLit 💫 ---- */  
- /* wallust template - colors-waybar */
+@define-color foreground #F9E3DF;
+@define-color background #151316;
+@define-color background-alt rgba(21,19,22,0.25);
+@define-color cursor #F9E3DF;
 
- @define-color foreground #D3BDDB;
- @define-color background #251E2D;
- @define-color background-alt rgba(37,30,45,0.25);
- @define-color cursor #D3BDDB;
- 
- @define-color color0 #4C4354;
- @define-color color1 #361356;
- @define-color color2 #411B5D;
- @define-color color3 #4B2264;
- @define-color color4 #56296B;
- @define-color color5 #613173;
- @define-color color6 #613173;
- @define-color color7 #B898C4;
- @define-color color8 #806A89;
- @define-color color9 #481A72;
- @define-color color10 #56237C;
- @define-color color11 #652D86;
- @define-color color12 #73378F;
- @define-color color13 #814199;
- @define-color color14 #814199;
- @define-color color15 #B898C4; 
+@define-color color0 #3D3A3E;
+@define-color color1 #190E1E;
+@define-color color2 #191F64;
+@define-color color3 #482C5B;
+@define-color color4 #5F3A79;
+@define-color color5 #783E51;
+@define-color color6 #B2827B;
+@define-color color7 #EECEC9;
+@define-color color8 #A6908D;
+@define-color color9 #211328;
+@define-color color10 #222985;
+@define-color color11 #603A79;
+@define-color color12 #7F4EA2;
+@define-color color13 #A0536C;
+@define-color color14 #EDAEA4;
+@define-color color15 #EECEC9;
+
+@define-color base   #1e1e2e;
+@define-color mantle #181825;
+@define-color crust  #11111b;
+
+@define-color text     #cdd6f4;
+@define-color subtext0 #a6adc8;
+@define-color subtext1 #bac2de;
+
+@define-color surface0 #313244;
+@define-color surface1 #45475a;
+@define-color surface2 #585b70;
+
+@define-color overlay0 #6c7086;
+@define-color overlay1 #7f849c;
+@define-color overlay2 #9399b2;
+
+@define-color blue      #89b4fa;
+@define-color lavender  #b4befe;
+@define-color sapphire  #74c7ec;
+@define-color sky       #89dceb;
+@define-color teal      #94e2d5;
+@define-color green     #a6e3a1;
+@define-color yellow    #f9e2af;
+@define-color peach     #fab387;
+@define-color maroon    #eba0ac;
+@define-color red       #f38ba8;
+@define-color mauve     #cba6f7;
+@define-color pink      #f5c2e7;
+@define-color flamingo  #f2cdcd;
+@define-color rosewater #f5e0dc;
+
