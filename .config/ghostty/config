@@ -42,7 +42,8 @@
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 
-theme = catppuccin-macchiato
+# theme = TokyoNight Moon
+theme = Catppuccin Macchiato
 shell-integration = zsh
 cursor-style = bar
 
