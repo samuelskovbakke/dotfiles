@@ -16,7 +16,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 plugins=(
     git
-    archlinux
+    git-auto-fetch
     zsh-autosuggestions
     zsh-syntax-highlighting
     # tmux
