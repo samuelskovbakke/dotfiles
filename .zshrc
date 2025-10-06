@@ -15,6 +15,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 plugins=(
     git
+    git-auto-fetch
     archlinux
     zsh-autosuggestions
     zsh-syntax-highlighting
