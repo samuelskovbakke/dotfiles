@@ -76,8 +76,7 @@ window#waybar.empty #window {
 
 /* This section can be use if you want to separate waybar modules */
 .modules-left,
-.modules-center,
-.modules-right {
+.modules-center {
   background: @theme_base_color;
   /* border: 0.5px solid @overlay0; */
   border: 1.5px solid @blue;
@@ -89,10 +88,10 @@ window#waybar.empty #window {
   border-radius: 10px;
 }
 
-.modules-left,
-.modules-right {
-  border: 1.5px solid @blue;
-}
+/* .modules-left, */
+/* .modules-right { */
+/*   border: 1.5px solid @blue; */
+/* } */
 
 #backlight,
 #backlight-slider,
@@ -155,6 +154,65 @@ window#waybar.empty #window {
   padding-bottom: 4px;
   padding-right: 6px;
   padding-left: 6px;
+}
+
+/* My Own Little Tweaks*/
+#custom-power {
+  background: @theme_base_color;
+  border: 1.5px solid @blue;
+  border-left: 0px solid @blue;
+  margin-top: 2px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-right: 4px;
+  padding-left: 4px;
+  border-radius: 0px 10px 10px 0px;
+}
+#battery {
+  background: @theme_base_color;
+  border: 1.5px solid @blue;
+  border-right: 0px;
+  border-left: 0px;
+  margin-top: 2px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-right: 4px;
+  padding-left: 4px;
+  border-radius: 0px;
+}
+#pulseaudio {
+  background: @theme_base_color;
+  border: 1.5px solid @blue;
+  border-right: 0px;
+  margin-top: 2px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-right: 4px;
+  padding-left: 4px;
+  border-radius: 10px 0px 0px 10px;
+}
+#pulseaudio.microphone {
+  background: @theme_base_color;
+  border: 1.5px solid @blue;
+  border-right: 0px;
+  border-left: 0px;
+  margin-top: 2px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-right: 4px;
+  padding-left: 4px;
+  border-radius: 0px;
+}
+#tray {
+  background: @theme_base_color;
+  border: 1.5px solid @blue;
+  margin-top: 2px;
+  margin-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-right: 4px;
+  padding-left: 4px;
+  border-radius: 10px;
 }
 
 /*-----Indicators----*/
@@ -306,4 +364,3 @@ window#waybar.empty #window {
   min-height: 10px;
   border-radius: 5px;
 }
-
