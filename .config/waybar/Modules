@@ -206,6 +206,11 @@
 	},
 },
 
+"niri/window": {
+  "format": "{title}",
+  "max-length": 50,
+},
+
 "idle_inhibitor": {
 	"tooltip": true,
 	"tooltip-format-activated": "Idle_inhibitor active",

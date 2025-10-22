@@ -264,4 +264,20 @@
     "class<PrusaSlicer|UltiMaker-Cura|OrcaSlicer>": "󰹛",
 		}
 	},
+  "niri/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      // Named workspaces
+      // (you need to configure them in niri)
+      //"browser": "󰰷 ",
+      //"discord": " ",
+      //"terminal": " ",
+      "browser": "1",
+      "discord": "2",
+      "terminal": "3",
+      // Icons by state
+      //"active": "",
+      //"default": ""
+    }
+  },
 }
