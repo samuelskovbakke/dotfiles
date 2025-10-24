@@ -11,13 +11,13 @@ workspace "discord"
 workspace "terminal"
 
 window-rule {
-  match title="^$"  
-  // treat-as-window false
+  match title="^$"
+  open-floating true
 }
 
 window-rule {
   match app-id="app.zen_browser.zen"
-  // match at-startup=true
+  match at-startup=true
   open-on-workspace "browser"
   // opacity 0.9
 }
