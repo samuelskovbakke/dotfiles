@@ -1,0 +1,19 @@
+// Add lines like this to spawn processes at startup.
+// Note that running niri as a session supports xdg-desktop-autostart,
+// which may be more convenient to use.
+// See the binds section below for more spawn examples.
+
+// spawn-sh-at-startup "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP & systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
+spawn-sh-at-startup "xrandr --output 'DP-3' --primary"
+spawn-sh-at-startup "waybar & swaync & ~/.config/hypr/UserScripts/WallpaperSelect.sh"
+spawn-sh-at-startup "app.zen_browser.zen & vesktop & ghostty & steam"
+spawn-sh-at-startup "openrgb --startminimized -p samuel.orp"
+
+// To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
+// spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
+
+hotkey-overlay {
+    // Uncomment this line to disable the "Important Hotkeys" pop-up at startup.
+    skip-at-startup
+}
+

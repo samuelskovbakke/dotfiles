@@ -5,6 +5,11 @@
 
 {
 
+"niri/window": {
+  "format": "{title}",
+  "max-length": 80,
+},
+
 "temperature": {
 	"interval": 10,
 	"tooltip": true,
