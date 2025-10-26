@@ -17,15 +17,21 @@ binds {
     Mod+Return hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
     Mod+B hotkey-overlay-title="Open the the default browser" { spawn-sh "xdg-open 'https://'"; }
     Mod+Space hotkey-overlay-title="Run an Application: rofi" { spawn-sh "pkill rofi || true && rofi -show drun -modi drun,filebrowser,run,window"; }
-    Mod+D hotkey-overlay-title="Run an Application: rofi" { spawn-sh "pkill rofi || true && rofi -show drun -modi drun,filebrowser,run,window"; }
+    // Mod+D hotkey-overlay-title="Run an Application: rofi" { spawn-sh "pkill rofi || true && rofi -show drun -modi drun,filebrowser,run,window"; }
     Ctrl+Alt+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock"; }
     Mod+E hotkey-overlay-title="Open file browser: Thunar" { spawn "thunar"; }
 
     Ctrl+Alt+P hotkey-overlay-title="Power menu" { spawn "~/.config/hypr/scripts/Wlogout-niri.sh"; }
 
-    Mod+Alt+B hotkey-overlay-title="Switch Waybar theme" { spawn-sh "~/.config/hypr/scripts/WaybarLayout.sh"; }
     Mod+W hotkey-overlay-title="Switch Wallpaper" { spawn-sh "~/.config/hypr/UserScripts/WallpaperSelect.sh"; }
     Mod+Alt+C hotkey-overlay-title="Open Calculator" { spawn-sh "~/.config/hypr/UserScripts/RofiCalc.sh"; }
+    
+    Mod+Ctrl+R hotkey-overlay-title="Switch Rofi Theme" { spawn-sh "~/.config/hypr/scripts/RofiThemeSelector.sh"; }
+    Mod+S hotkey-overlay-title="Search in Browser" { spawn-sh "~/.config/hypr/scripts/RofiSearch.sh"; }
+
+    Mod+Ctrl+Alt+B hotkey-overlay-title="Toggle Waybar" { spawn-sh "pkill -SIGUSR1 waybar"; }
+    Mod+Alt+B hotkey-overlay-title="Switch Waybar layout" { spawn-sh "~/.config/hypr/scripts/WaybarLayout.sh"; }
+    Mod+Ctrl+B hotkey-overlay-title="Switch Waybar style" { spawn-sh "~/.config/hypr/scripts/WaybarStyles.sh"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
@@ -35,9 +41,9 @@ binds {
     // Example volume keys mappings for PipeWire & WirePlumber.
     // The allow-when-locked=true property makes them work even when the session is locked.
     // Using spawn-sh allows to pass multiple arguments together with the command.
-    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.02+"; }
-    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.02-"; }
-    XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
+    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "~/.config/hypr/scripts/Volume.sh --inc"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "~/.config/hypr/scripts/Volume.sh --dec"; }
+    XF86AudioMute        allow-when-locked=true { spawn-sh "~/.config/hypr/scripts/Volume.sh --toggle"; }
     XF86AudioMicMute     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
 
     // Example brightness key mappings for brightnessctl.
@@ -195,19 +201,19 @@ binds {
     // The following binds move the focused window in and out of a column.
     // If the window is alone, they will consume it into the nearby column to the side.
     // If the window is already in a column, they will expel it out.
-    Mod+BracketLeft  { consume-or-expel-window-left; }
-    Mod+BracketRight { consume-or-expel-window-right; }
+    Mod+Comma  { consume-or-expel-window-left; }
+    Mod+Period { consume-or-expel-window-right; }
 
     // Consume one window from the right to the bottom of the focused column.
-    Mod+Comma  { consume-window-into-column; }
+    // Mod+Comma  { consume-window-into-column; }
     // Expel the bottom window from the focused column to the right.
-    Mod+Period { expel-window-from-column; }
+    // Mod+Period { expel-window-from-column; }
 
     Mod+R { switch-preset-column-width; }
     // Cycling through the presets in reverse order is also possible.
     // Mod+R { switch-preset-column-width-back; }
-    Mod+Shift+R { switch-preset-window-height; }
-    Mod+Ctrl+R { reset-window-height; }
+    // Mod+Shift+R { switch-preset-window-height; }
+    // Mod+Ctrl+R { reset-window-height; }
     Mod+F { maximize-column; }
     Mod+Shift+F { fullscreen-window; }
 

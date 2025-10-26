@@ -66,6 +66,7 @@ input {
     // Focus windows and outputs automatically when moving the mouse into them.
     // Setting max-scroll-amount="0%" makes it work only on windows already fully on screen.
     focus-follows-mouse max-scroll-amount="0%"
+    workspace-auto-back-and-forth
 }
 
 gestures {
@@ -80,6 +81,6 @@ cursor {
     xcursor-size 28 // Default 24 or 32
 
     // hide-when-typing
-    hide-after-inactive-ms 5000
+    // hide-after-inactive-ms 5000
 }
 
