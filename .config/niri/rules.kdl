@@ -40,7 +40,7 @@ window-rule {
   match app-id="vesktop"
   open-on-workspace "discord"
   // match at-startup=true
-  opacity 0.95
+  // opacity 0.95
 }
 
 window-rule {
