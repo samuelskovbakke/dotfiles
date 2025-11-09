@@ -34,12 +34,14 @@ window-rule {
   match app-id="app.zen_browser.zen"
   // match at-startup=true
   open-on-workspace "browser"
+  open-maximized true
   opacity 1.0
 }
 
 window-rule {
   match app-id="vesktop"
   open-on-workspace "discord"
+  open-maximized true
   // match at-startup=true
   // opacity 0.95
 }
@@ -55,6 +57,7 @@ window-rule {
   match app-id="steam|lutris|heroic"
   // match at-startup=true
   open-on-workspace "games"
+  open-maximized true
   // opacity 0.95
 }
 

@@ -5,8 +5,13 @@
 
 // spawn-sh-at-startup "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP & systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
 spawn-sh-at-startup "xrandr --output 'DP-3' --primary"
-spawn-sh-at-startup "waybar & swaync & ~/.config/hypr/UserScripts/WallpaperSelect.sh"
-spawn-sh-at-startup "app.zen_browser.zen & vesktop & ghostty & steam"
+spawn-sh-at-startup "waybar"
+spawn-sh-at-startup "swaync & ~/.config/hypr/UserScripts/WallpaperSelect.sh"
+spawn-sh-at-startup "systemctl --user start plasma-polkit-agent.service"
+spawn-sh-at-startup "app.zen_browser.zen" 
+spawn-sh-at-startup "vesktop" 
+spawn-sh-at-startup "ghostty"
+spawn-sh-at-startup "steam"
 spawn-sh-at-startup "sleep 1 && openrgb --startminimized -p samuel.orp"
 spawn-sh-at-startup "sleep 1 && niri msg workspace discord move-to-output \"PNP(AOC) Q27G4 1O0R3HA008126\""
 

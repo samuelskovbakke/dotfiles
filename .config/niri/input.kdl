@@ -80,7 +80,7 @@ cursor {
     xcursor-theme "BreezeX-RosePine-Linux"
     xcursor-size 28 // Default 24 or 32
 
-    // hide-when-typing
+    hide-when-typing
     // hide-after-inactive-ms 5000
 }
 
