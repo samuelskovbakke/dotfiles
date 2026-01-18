@@ -14,6 +14,10 @@ workspace "discord" {
   open-on-output "PNP(AOC) Q27G4 1O0R3HA008126"
   // open-on-output "DP-1"
 }
+workspace "mail" {
+  open-on-output "PNP(AOC) Q27G4 1O0R3HA008126"
+  // open-on-output "DP-1"
+}
 
 workspace "terminal" {
   open-on-output "ASUSTek COMPUTER INC VG27A R7LMQS013977"
@@ -41,6 +45,14 @@ window-rule {
 window-rule {
   match app-id="vesktop"
   open-on-workspace "discord"
+  open-maximized true
+  // match at-startup=true
+  // opacity 0.95
+}
+
+window-rule {
+  match app-id="thunderbird"
+  open-on-workspace "mail"
   open-maximized true
   // match at-startup=true
   // opacity 0.95
