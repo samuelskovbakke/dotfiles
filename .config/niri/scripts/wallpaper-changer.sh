@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
-# /* ---- 💫 https://github.com/JaKooLit 💫 ---- */ 
-# This script for selecting wallpapers (SUPER W)
 
 # WALLPAPERS PATH
 terminal=kitty
@@ -20,12 +18,11 @@ fi
 
 # variables
 rofi_theme="$HOME/.config/rofi/config-wallpaper.rasi"
-# focused_monitor=$(hyprctl monitors -j | jq -r '.[] | select(.focused) | .name')
-focused_monitor=$(niri msg focused-output | awk -F'[()]' '/^Output/ {print $2}')
+focused_monitor=$(niri msg focused-output | sed -n '/Output /s/.*(\(.*\)).*/\1/p')
 
 # Monitor details
-scale_factor=$(hyprctl monitors -j | jq -r --arg mon "$focused_monitor" '.[] | select(.name == $mon) | .scale')
-monitor_height=$(hyprctl monitors -j | jq -r --arg mon "$focused_monitor" '.[] | select(.name == $mon) | .height')
+scale_factor=$(niri msg focused-output | awk '/Scale:/ {print $2}')
+monitor_height=$(niri msg focused-output | awk '/Logical size:/ {split($3, a, "x"); print a[2]}')
 
 icon_size=$(echo "scale=1; ($monitor_height * 3) / ($scale_factor * 150)" | bc)
 
@@ -50,8 +47,8 @@ fi
 # Retrieve image files using null delimiter to handle spaces in filenames
 mapfile -d '' PICS < <(find -L "${wallDIR}" -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.pnm" -o -iname "*.tga" -o -iname "*.tiff" -o -iname "*.webp" -o -iname "*.bmp" -o -iname "*.farbfeld" -o -iname "*.png" -o -iname "*.gif" \) -print0)
 
-RANDOM_PIC="${PICS[$((RANDOM % ${#PICS[@]}))]}"
-RANDOM_PIC_NAME=". random"
+# RANDOM_PIC="${PICS[$((RANDOM % ${#PICS[@]}))]}"
+# RANDOM_PIC_NAME=". random"
 
 # Rofi command
 rofi_command="rofi -i -show -dmenu -config $rofi_theme -theme-str $rofi_override"
@@ -62,7 +59,7 @@ menu() {
   IFS=$'\n' sorted_options=($(sort <<<"${PICS[*]}"))
   
   # Place ". random" at the beginning with the random picture as an icon
-  printf "%s\x00icon\x1f%s\n" "$RANDOM_PIC_NAME" "$RANDOM_PIC"
+  # printf "%s\x00icon\x1f%s\n" "$RANDOM_PIC_NAME" "$RANDOM_PIC"
   
   for pic_path in "${sorted_options[@]}"; do
     pic_name=$(basename "$pic_path")
@@ -84,7 +81,7 @@ main() {
   choice=$(menu | $rofi_command)
   
   choice=$(echo "$choice" | xargs)
-  RANDOM_PIC_NAME=$(echo "$RANDOM_PIC_NAME" | xargs)
+  # RANDOM_PIC_NAME=$(echo "$RANDOM_PIC_NAME" | xargs)
 
   # No choice case
   if [[ -z "$choice" ]]; then
@@ -93,14 +90,14 @@ main() {
   fi
 
   # Random choice case
-  if [[ "$choice" == "$RANDOM_PIC_NAME" ]]; then
-	swww img -o "$focused_monitor" "$RANDOM_PIC" $SWWW_PARAMS;
-    sleep 2
-    "$SCRIPTSDIR/WallustSwww.sh"
-    sleep 0.5
-    "$SCRIPTSDIR/Refresh.sh"
-    exit 0
-  fi
+ #  if [[ "$choice" == "$RANDOM_PIC_NAME" ]]; then
+	# swww img -o "$focused_monitor" "$RANDOM_PIC" $SWWW_PARAMS;
+ #    sleep 2
+ #    "$SCRIPTSDIR/WallustSwww.sh"
+ #    sleep 0.5
+ #    "$SCRIPTSDIR/Refresh.sh"
+ #    exit 0
+ #  fi
 
   pic_index=-1
   for i in "${!PICS[@]}"; do
@@ -128,12 +125,12 @@ fi
 
 main
 
-wait $!
-"$SCRIPTSDIR/WallustSwww.sh" &&
-
-wait $!
-sleep 2
-"$SCRIPTSDIR/Refresh.sh"
+# wait $!
+# "$SCRIPTSDIR/WallustSwww.sh" &&
+#
+# wait $!
+# sleep 2
+# "$SCRIPTSDIR/Refresh.sh"
 
 sleep 1
 # Check if user selected a wallpaper

@@ -23,7 +23,8 @@ binds {
 
     Ctrl+Alt+P hotkey-overlay-title="Power menu" { spawn "~/.config/hypr/scripts/Wlogout-niri.sh"; }
 
-    Mod+W hotkey-overlay-title="Switch Wallpaper" { spawn-sh "~/.config/hypr/UserScripts/WallpaperSelect.sh"; }
+    // Mod+W hotkey-overlay-title="Switch Wallpaper" { spawn-sh "~/.config/hypr/UserScripts/WallpaperSelect.sh"; }
+    Mod+W hotkey-overlay-title="Switch Wallpaper" { spawn-sh "~/.config/niri/scripts/wallpaper-changer.sh"; }
     Mod+Alt+C hotkey-overlay-title="Open Calculator" { spawn-sh "~/.config/hypr/UserScripts/RofiCalc.sh"; }
     
     Mod+Ctrl+R hotkey-overlay-title="Switch Rofi Theme" { spawn-sh "~/.config/hypr/scripts/RofiThemeSelector.sh"; }
