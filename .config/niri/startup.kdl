@@ -14,6 +14,7 @@ spawn-sh-at-startup "vesktop"
 spawn-sh-at-startup "ghostty"
 spawn-sh-at-startup "steam"
 spawn-sh-at-startup "thunderbird"
+spawn-sh-at-startup "ckb-next -b"
 spawn-sh-at-startup "openrgb --startminimized -p samuel.orp"
 spawn-sh-at-startup "niri msg workspace discord move-to-output \"PNP(AOC) Q27G4 1O0R3HA008126\""
 

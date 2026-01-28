@@ -1,0 +1,38 @@
+{
+    "Effects": [
+        {
+            "AllowOnlyFirst": false,
+            "AutoStart": true,
+            "Brightness": 100,
+            "ControllerZones": [],
+            "CustomName": "",
+            "EffectClassName": "RainbowWave",
+            "FPS": 60,
+            "RandomColors": false,
+            "Slider2Val": 19,
+            "Speed": 4,
+            "Temperature": 0,
+            "Tint": 0
+        },
+        {
+            "AllowOnlyFirst": false,
+            "AutoStart": true,
+            "Brightness": 100,
+            "ControllerZones": [],
+            "CustomName": "",
+            "CustomSettings": {
+                "colors": [
+                    16776960
+                ]
+            },
+            "EffectClassName": "Breathing",
+            "FPS": 60,
+            "RandomColors": false,
+            "Slider2Val": 1,
+            "Speed": 30,
+            "Temperature": 0,
+            "Tint": 0
+        }
+    ],
+    "version": 2
+}
