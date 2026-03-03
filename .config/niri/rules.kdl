@@ -18,7 +18,7 @@ window-rule {
   match app-id="app.zen_browser.zen"
   // match at-startup=true
   open-on-workspace "browser"
-  opacity 1.0
+  // opacity 0.8
 }
 
 window-rule {

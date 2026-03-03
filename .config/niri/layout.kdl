@@ -70,7 +70,7 @@ layout {
     // You can change how the focus ring looks.
     focus-ring {
         // Uncomment this line to disable the focus ring.
-        // off
+        off
 
         // How many logical pixels the ring extends out from the windows.
         width 1
@@ -82,6 +82,7 @@ layout {
 
         // Color of the ring on the active monitor.
         active-color "#89b4fa"
+        // active-color "red"
 
         // Color of the ring on inactive monitors.
         //
@@ -160,7 +161,7 @@ layout {
         offset x=0 y=0
 
         // You can also change the shadow color and opacity.
-        color "#89b4fa"
+        // color "#89b4fa"
     }
 
     // Struts shrink the area occupied by windows, similarly to layer-shell panels.
