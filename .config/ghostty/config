@@ -50,5 +50,5 @@ cursor-style = bar
 font-family = "Fira Code SemiBold"
 font-size = 12
 
-background-opacity = 0.7
+background-opacity = 0.9
 background-blur = true
