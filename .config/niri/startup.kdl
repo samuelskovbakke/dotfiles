@@ -7,6 +7,7 @@
 spawn-sh-at-startup "waybar & swaync & ~/.config/hypr/UserScripts/WallpaperSelect.sh"
 spawn-sh-at-startup "app.zen_browser.zen & vesktop & ghostty"
 spawn-sh-at-startup "hypridle"
+spawn-sh-at-startup "ckb-next -b"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
