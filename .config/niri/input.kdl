@@ -8,7 +8,7 @@ input {
             // For more information, see xkeyboard-config(7).
 
             // For example:
-            layout "dk"
+            layout "us,dk"
             // options "grp:win_space_toggle,compose:ralt,ctrl:nocaps"
             options "ctrl:nocaps"
 

@@ -25,6 +25,8 @@ binds {
 
     // Mod+W hotkey-overlay-title="Switch Wallpaper" { spawn-sh "~/.config/hypr/UserScripts/WallpaperSelect.sh"; }
     Mod+W hotkey-overlay-title="Switch Wallpaper" { spawn-sh "~/.config/niri/scripts/wallpaper-changer.sh"; }
+    Mod+Shift+W hotkey-overlay-title="Add WebApp" { spawn-sh "~/.config/niri/scripts/webapp-install.sh"; }
+    Mod+Ctrl+W hotkey-overlay-title="Remove WebApp" { spawn-sh "~/.config/niri/scripts/webapp-remove.sh"; }
     Mod+Alt+C hotkey-overlay-title="Open Calculator" { spawn-sh "~/.config/hypr/UserScripts/RofiCalc.sh"; }
     
     Mod+Ctrl+R hotkey-overlay-title="Switch Rofi Theme" { spawn-sh "~/.config/hypr/scripts/RofiThemeSelector.sh"; }
@@ -256,8 +258,8 @@ binds {
     // a matching layout switch hotkey configured in xkb options above.
     // Having both at once on the same hotkey will break the switching,
     // since it will switch twice upon pressing the hotkey (once by xkb, once by niri).
-    // Mod+Space       { switch-layout "next"; }
-    // Mod+Shift+Space { switch-layout "prev"; }
+    XF86Tools       { spawn-sh "~/.config/niri/scripts/kbd-layout.sh --next"; } // key is F13 in keychron launcher assigned to the key above num-lock
+    // Mod+Shift+Ctrl+O { switch-layout "prev"; }
 
     Print { screenshot; }
     Mod+Shift+S { screenshot; }

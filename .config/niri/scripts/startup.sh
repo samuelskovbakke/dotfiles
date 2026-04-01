@@ -62,12 +62,6 @@ log "Launching background services"
 sunsetr >>$LOGFILE 2>&1 &
 openrgb --startminimized -p samuel.orp >>$LOGFILE 2>&1 &
 
-# === FIX: Kill any leftover ckb-next before starting ===
-log "Ensuring ckb-next is not running"
-pkill -9 ckb-next 2>/dev/null || true
-sleep 0.5
-ckb-next -b >>$LOGFILE 2>&1 &
-
 # === LAUNCH NATIVE APPS FIRST ===
 
 log "Launching native applications"
@@ -83,5 +77,11 @@ sleep 2
 
 log "Launching Flatpak applications"
 flatpak run app.zen_browser.zen >>$LOGFILE 2>&1 &
+
+# === FIX: Kill any leftover ckb-next before starting ===
+log "Ensuring ckb-next is not running"
+pkill -9 ckb-next 2>/dev/null || true
+sleep 0.5
+ckb-next -b >>$LOGFILE 2>&1 &
 
 log "Startup complete ($(date +%H:%M:%S))"
