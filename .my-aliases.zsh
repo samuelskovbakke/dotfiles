@@ -11,6 +11,7 @@ alias yay="yay --noconfirm"
 alias give-me-upgrade="sudo pacman --noconfirm -Syyuu && yay"
 alias grep="rg"
 alias ff="fastfetch"
+alias gg="lazygit"
 
 # Changing/making/removing directory
 setopt auto_cd
