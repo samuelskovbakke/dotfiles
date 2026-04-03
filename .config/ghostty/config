@@ -42,7 +42,7 @@
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 
-theme = Catppuccin Mocha
+theme = noctalia
 # theme = TokyoNight Storm
 shell-integration = zsh
 cursor-style = bar

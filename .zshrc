@@ -22,6 +22,7 @@ plugins=(
     # tmux
     you-should-use
     command-not-found
+    zsh-vi-mode
 )
 
 #ZSH_TMUX_AUTOSTART=true
