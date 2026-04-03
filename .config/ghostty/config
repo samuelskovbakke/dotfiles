@@ -43,7 +43,7 @@
 # resize-overlay-duration = 4s 200ms
 
 # theme = TokyoNight Moon
-theme = Catppuccin Mocha
+theme = noctalia
 shell-integration = zsh
 cursor-style = bar
 

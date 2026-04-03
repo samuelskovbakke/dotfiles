@@ -27,22 +27,22 @@ get_icon() {
 }
 
 # Notify
-notify_user() {
-    notify-send -e \
-        -h string:x-canonical-private-synchronous:layout_notif \
-        -u low \
-        -i "$(get_icon)" \
-        " Keyboard Layout:" \
-        " $(get_layout_name)"
-}
+# notify_user() {
+#     notify-send -e \
+#         -h string:x-canonical-private-synchronous:layout_notif \
+#         -u low \
+#         -i "$(get_icon)" \
+#         " Keyboard Layout:" \
+#         " $(get_layout_name)"
+# }
 
 # Switch layout
 switch_next() {
-    niri msg action switch-layout next && notify_user
+    niri msg action switch-layout next #&& notify_user
 }
 
 switch_prev() {
-    niri msg action switch-layout prev && notify_user
+    niri msg action switch-layout prev #&& notify_user
 }
 
 # Execute

@@ -42,20 +42,21 @@ log "Core session ready"
 
 # === WALLPAPER DAEMON ===
 
-log "Starting swww-daemon"
-swww-daemon >>$LOGFILE 2>&1 &
-
-log "Waiting for swww socket..."
-for i in $(seq 1 30); do
-  swww query >/dev/null 2>&1 && { log "swww-daemon ready"; break; }
-  sleep 0.1
-done
+# log "Starting swww-daemon"
+# swww-daemon >>$LOGFILE 2>&1 &
+#
+# log "Waiting for swww socket..."
+# for i in $(seq 1 30); do
+#   swww query >/dev/null 2>&1 && { log "swww-daemon ready"; break; }
+#   sleep 0.1
+# done
 
 # === LAUNCH UI COMPONENTS ===
 
 log "Launching UI components"
-waybar >>$LOGFILE 2>&1 &
-swaync >>$LOGFILE 2>&1 &
+# waybar >>$LOGFILE 2>&1 &
+# swaync >>$LOGFILE 2>&1 &
+noctalia-shell >>$LOGFILE 2>&1 &
 systemctl --user start plasma-polkit-agent.service
 
 log "Launching background services"
@@ -77,11 +78,5 @@ sleep 2
 
 log "Launching Flatpak applications"
 flatpak run app.zen_browser.zen >>$LOGFILE 2>&1 &
-
-# === FIX: Kill any leftover ckb-next before starting ===
-log "Ensuring ckb-next is not running"
-pkill -9 ckb-next 2>/dev/null || true
-sleep 0.5
-ckb-next -b >>$LOGFILE 2>&1 &
 
 log "Startup complete ($(date +%H:%M:%S))"
