@@ -27,7 +27,7 @@ binds {
     Mod+W hotkey-overlay-title="Switch Wallpaper" { spawn-sh "noctalia-shell ipc call wallpaper toggle"; }
     Mod+Shift+W hotkey-overlay-title="Add WebApp" { spawn-sh "~/.config/niri/scripts/webapp-install.sh"; }
     Mod+Ctrl+W hotkey-overlay-title="Remove WebApp" { spawn-sh "~/.config/niri/scripts/webapp-remove.sh"; }
-    Mod+Alt+C hotkey-overlay-title="Open Calculator" { spawn-sh "~/.config/hypr/UserScripts/RofiCalc.sh"; }
+    Mod+Alt+C hotkey-overlay-title="Open Calculator" { spawn-sh "noctalia-shell ipc call calculator toggle"; }
 
     Mod+Ctrl+Alt+B hotkey-overlay-title="Toggle Bar" { spawn-sh "noctalia-shell ipc call bar toggle"; }
     
@@ -49,8 +49,8 @@ binds {
     // Example brightness key mappings for brightnessctl.
     // You can use regular spawn with multiple arguments too (to avoid going through "sh"),
     // but you need to manually put each argument in separate "" quotes.
-    XF86MonBrightnessUp allow-when-locked=true { spawn "noctalia-shell ipc call brightness increase"; }
-    XF86MonBrightnessDown allow-when-locked=true { spawn "noctalia-shell ipc call brightness decrease"; }
+    XF86MonBrightnessUp allow-when-locked=true { spawn-sh "noctalia-shell ipc call brightness increase"; }
+    XF86MonBrightnessDown allow-when-locked=true { spawn-sh "noctalia-shell ipc call brightness decrease"; }
 
     XF86KbdBrightnessUp allow-when-locked=true { spawn-sh "brightnessctl --device='rgb:kbd_backlight' set +20%"; }
     XF86KbdBrightnessDown allow-when-locked=true { spawn-sh "brightnessctl --device='rgb:kbd_backlight' set 20%-"; }

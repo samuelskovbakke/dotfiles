@@ -198,9 +198,6 @@
                     "icon": "noctalia",
                     "id": "ControlCenter",
                     "useDistroLogo": true
-                },
-                {
-                    "id": "plugin:calculator"
                 }
             ]
         }
@@ -208,7 +205,7 @@
     "brightness": {
         "backlightDeviceMappings": [
         ],
-        "brightnessStep": 5,
+        "brightnessStep": 10,
         "enableDdcSupport": false,
         "enforceMinimum": true
     },
@@ -457,8 +454,8 @@
     },
     "nightLight": {
         "autoSchedule": true,
-        "dayTemp": "4500",
-        "enabled": false,
+        "dayTemp": "6500",
+        "enabled": true,
         "forced": false,
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
