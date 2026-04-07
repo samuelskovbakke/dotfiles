@@ -1,0 +1,22 @@
+{
+    "id": "calculator",
+    "name": "Calculator",
+    "version": "1.0.0",
+    "minNoctaliaVersion": "3.6.0",
+    "author": "Samuel Skovbakke",
+    "license": "MIT",
+    "repository": "https://github.com/samuelskovbakke/noctalia-plugins",
+    "description": "A popup calculator panel powered by qalc, with full expression history and text input.",
+    "tags": ["Bar", "Panel", "Utility"],
+    "entryPoints": {
+        "main": "Main.qml",
+        "barWidget": "BarWidget.qml",
+        "panel": "Panel.qml"
+    },
+    "dependencies": {
+        "plugins": []
+    },
+    "metadata": {
+        "defaultSettings": {}
+    }
+}
