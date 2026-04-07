@@ -75,7 +75,7 @@ Item {
     Rectangle {
         id: panelContainer
         anchors.fill: parent
-        color: Color.mSurface
+        color: "transparent"
         radius: Style.radiusXL
 
         ColumnLayout {
