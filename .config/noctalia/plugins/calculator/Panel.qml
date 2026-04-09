@@ -25,30 +25,44 @@ Item {
     property bool   isRunning:   false
     property var    history:     []
 
-    // ── qalc process ─────────────────────────────────────────────────────
+    // ── Persistent qalc process (keeps variables in memory) ──────────────
 
     Process {
         id: qalcProc
-        command: []
-        running: false
+        command: ["qalc", "-t"]  // -t for terse output
+        running: true  // keep process alive for session variables
+        stdinEnabled: true
 
-        stdout: StdioCollector {
-            onStreamFinished: {
+        onRunningChanged: {
+            if (!running) {
+                // Process exited unexpectedly - restart silently
                 root.isRunning = false
-                var raw    = this.text.trim()
-                var lines  = raw.split("\n").map(function(l) { return l.trim() }).filter(function(l) { return l.length > 0 })
-                var result = lines.length > 0 ? lines[lines.length - 1] : "(no output)"
-                var isErr  = result.toLowerCase().indexOf("error") === 0 || result === ""
-                root.history = root.history.concat([{ expr: root.currentExpr, result: result, isError: isErr }])
+                running = true
             }
         }
 
-        stderr: StdioCollector {
-            onStreamFinished: {
-                var err = this.text.trim()
-                if (err.length === 0) return
+        stdout: SplitParser {
+            onRead: function(line) {
+                var trimmed = line.trim()
+                // Skip empty lines and prompt lines
+                if (trimmed.length === 0) return
+                if (trimmed.indexOf(">") === 0) return
+
+                // Strip ANSI color codes
+                var clean = trimmed.replace(/\x1b\[[0-9;]*m/g, "")
+
                 root.isRunning = false
-                root.history = root.history.concat([{ expr: root.currentExpr, result: err, isError: true }])
+                var isErr = clean.toLowerCase().indexOf("error") >= 0 || clean.toLowerCase().indexOf("warning") >= 0
+                root.history = root.history.concat([{ expr: root.currentExpr, result: clean, isError: isErr }])
+            }
+        }
+
+        stderr: SplitParser {
+            onRead: function(line) {
+                var trimmed = line.trim()
+                if (trimmed.length === 0) return
+                root.isRunning = false
+                root.history = root.history.concat([{ expr: root.currentExpr, result: trimmed, isError: true }])
             }
         }
     }
@@ -56,10 +70,20 @@ Item {
     function doEval(expr) {
         var t = expr.trim()
         if (t.length === 0 || root.isRunning) return
+
+        // Handle special commands
+        if (t.toLowerCase() === "exit") {
+            if (pluginApi) pluginApi.closePanel(pluginApi.panelOpenScreen)
+            return
+        }
+        if (t.toLowerCase() === "clear") {
+            root.history = []
+            return
+        }
+
         root.currentExpr = t
-        root.isRunning   = true
-        qalcProc.command = ["qalc", "-t", t]
-        qalcProc.running = true
+        root.isRunning = true
+        qalcProc.write(t + "\n")
     }
 
     function doSubmit() {
@@ -217,7 +241,7 @@ Item {
 
             Text {
                 Layout.fillWidth: true
-                text: "↑↓ browse history  ·  click result to reuse"
+                text: "Variables persist  ·  'clear' clears history  ·  'exit' closes"
                 font.pixelSize: 11
                 color: Color.mOnSurfaceVariant
                 opacity: 0.5
