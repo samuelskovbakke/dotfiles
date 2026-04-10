@@ -297,9 +297,14 @@
     },
     "desktopWidgets": {
         "enabled": false,
-        "gridSnap": false,
+        "gridSnap": true,
         "gridSnapScale": false,
         "monitorWidgets": [
+            {
+                "name": "eDP-1",
+                "widgets": [
+                ]
+            }
         ],
         "overviewEnabled": true
     },
@@ -308,7 +313,7 @@
         "backgroundOpacity": 1,
         "colorizeIcons": false,
         "deadOpacity": 0.6,
-        "displayMode": "auto_hide",
+        "displayMode": "always_visible",
         "dockType": "floating",
         "enabled": false,
         "floatingRatio": 1,
@@ -325,7 +330,8 @@
         "launcherPosition": "end",
         "launcherUseDistroLogo": false,
         "monitors": [
-            "DP-2"
+            "DP-2",
+            "eDP-1"
         ],
         "onlySameOutput": true,
         "pinnedApps": [
@@ -346,12 +352,12 @@
         "avatarImage": "/home/samuel/.face",
         "boxRadiusRatio": 1,
         "clockFormat": "hh\\nmm",
-        "clockStyle": "custom",
+        "clockStyle": "digital",
         "compactLockScreen": false,
         "dimmerOpacity": 0.2,
         "enableBlurBehind": true,
         "enableLockScreenCountdown": false,
-        "enableLockScreenMediaControls": false,
+        "enableLockScreenMediaControls": true,
         "enableShadows": true,
         "forceBlackScreenCorners": false,
         "iRadiusRatio": 1,
@@ -381,12 +387,12 @@
         },
         "language": "",
         "lockOnSuspend": true,
-        "lockScreenAnimations": false,
-        "lockScreenBlur": 0,
+        "lockScreenAnimations": true,
+        "lockScreenBlur": 0.6,
         "lockScreenCountdownDuration": 10000,
         "lockScreenMonitors": [
         ],
-        "lockScreenTint": 0,
+        "lockScreenTint": 0.6,
         "passwordChars": false,
         "radiusRatio": 1,
         "reverseScroll": false,
@@ -425,7 +431,7 @@
         "screenOffCommand": "",
         "screenOffTimeout": 600,
         "suspendCommand": "",
-        "suspendTimeout": 1800
+        "suspendTimeout": 0
     },
     "location": {
         "analogClockInCalendar": false,
@@ -472,7 +478,7 @@
         "density": "compact",
         "enableBatteryToast": true,
         "enableKeyboardLayoutToast": true,
-        "enableMarkdown": false,
+        "enableMarkdown": true,
         "enableMediaToast": false,
         "enabled": true,
         "location": "top_right",
@@ -484,7 +490,7 @@
         "respectExpireTimeout": false,
         "saveToHistory": {
             "critical": true,
-            "low": true,
+            "low": false,
             "normal": true
         },
         "sounds": {
@@ -518,7 +524,7 @@
     "sessionMenu": {
         "countdownDuration": 10000,
         "enableCountdown": false,
-        "largeButtonsLayout": "grid",
+        "largeButtonsLayout": "single-row",
         "largeButtonsStyle": true,
         "position": "center",
         "powerOptions": [

@@ -27,12 +27,12 @@ Only the CLI binary (`qalc`) is required — the GTK frontend is optional.
 
 ## Installation
 
-1. Copy (or symlink) this folder into `~/.config/noctalia/plugins/qalc-calculator/`.
+1. Copy (or symlink) this folder into `~/.config/noctalia/plugins/calculator/`.
 2. Register it in `~/.config/noctalia/plugins.json`:
 
 ```json
 {
-  "qalc-calculator": {
+  "calculator": {
     "enabled": true,
     "sourceUrl": "https://github.com/yourusername/noctalia-plugins"
   }
@@ -45,8 +45,8 @@ Only the CLI binary (`qalc`) is required — the GTK frontend is optional.
 killall qs && qs -p ~/.config/noctalia/noctalia-shell
 ```
 
-4. Open **Settings → Plugins**, find *Qalc Calculator*, and enable it.
-5. Open **Settings → Bar**, add the **Qalc Calculator** widget to your preferred
+4. Open **Settings → Plugins**, find *Calculator*, and enable it.
+5. Open **Settings → Bar**, add the **Calculator** widget to your preferred
    section (Left / Center / Right).
 
 ## Usage
@@ -78,17 +78,14 @@ The plugin registers an IPC handler so you can toggle the calculator from the
 command line or a compositor keybind:
 
 ```bash
-noctalia-shell ipc call plugin:qalc-calculator toggle
+noctalia-shell ipc call calculator toggle
 ```
-
-> **Note:** Noctalia routes plugin IPC under the `plugin:` prefix, so the full
-> target is `plugin:qalc-calculator`, not just `calculator`.
 
 ### Hyprland example
 
 ```ini
 # ~/.config/hypr/hyprland.conf
-bind = $mod, C, exec, noctalia-shell ipc call plugin:qalc-calculator toggle
+bind = $mod, C, exec, noctalia-shell ipc call calculator toggle
 ```
 
 ### Niri example
@@ -96,7 +93,7 @@ bind = $mod, C, exec, noctalia-shell ipc call plugin:qalc-calculator toggle
 ```kdl
 # ~/.config/niri/config.kdl
 binds {
-    Mod+C { spawn "noctalia-shell" "ipc" "call" "plugin:qalc-calculator" "toggle"; }
+    Mod+C { spawn "noctalia-shell" "ipc" "call" "calculator" "toggle"; }
 }
 ```
 
@@ -104,7 +101,7 @@ binds {
 
 ```
 # ~/.config/sway/config
-bindsym $mod+c exec noctalia-shell ipc call plugin:qalc-calculator toggle
+bindsym $mod+c exec noctalia-shell ipc call calculator toggle
 ```
 
 ## License
