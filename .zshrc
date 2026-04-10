@@ -84,3 +84,8 @@ eval "$(pay-respects zsh --alias)"
 [[ ! -f ~/dotfiles/.p10k.zsh ]] || source ~/dotfiles/.p10k.zsh
 
 eval "$(zoxide init zsh)"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/home/samuel/.lmstudio/bin"
+# End of LM Studio CLI section
+
