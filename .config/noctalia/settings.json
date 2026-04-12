@@ -626,11 +626,11 @@
             },
             {
                 "enabled": true,
-                "id": "zenBrowser"
+                "id": "steam"
             },
             {
                 "enabled": true,
-                "id": "steam"
+                "id": "zenBrowser"
             }
         ],
         "enableUserTheming": false
