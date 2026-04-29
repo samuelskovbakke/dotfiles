@@ -480,8 +480,8 @@
         "respectExpireTimeout": false,
         "saveToHistory": {
             "critical": true,
-            "low": true,
-            "normal": true
+            "low": false,
+            "normal": false
         },
         "sounds": {
             "criticalSoundFile": "",
