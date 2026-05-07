@@ -47,8 +47,12 @@ theme = noctalia
 shell-integration = zsh
 cursor-style = bar
 
-font-family = "Fira Code SemiBold"
+font-family = "FiraCode Nerd Font"
 font-size = 12
+
+# Font features (-calt disables ligatures)
+# Options: Features
+# font-feature = -calt
 
 background-opacity = 0.9
 background-blur = true
