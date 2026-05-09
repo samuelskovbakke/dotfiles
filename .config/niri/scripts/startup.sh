@@ -60,7 +60,7 @@ noctalia-shell >>$LOGFILE 2>&1 &
 systemctl --user start plasma-polkit-agent.service
 
 log "Launching background services"
-sunsetr >>$LOGFILE 2>&1 &
+# sunsetr >>$LOGFILE 2>&1 &
 openrgb --startminimized -p samuel.orp >>$LOGFILE 2>&1 &
 
 # === LAUNCH NATIVE APPS FIRST ===
