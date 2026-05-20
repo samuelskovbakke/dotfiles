@@ -43,7 +43,15 @@ window-rule {
 }
 
 window-rule {
-  match app-id="vesktop || discord"
+  match app-id="vesktop"
+  open-on-workspace "discord"
+  open-maximized true
+  // match at-startup=true
+  // opacity 0.95
+}
+
+window-rule {
+  match app-id="discord"
   open-on-workspace "discord"
   open-maximized true
   // match at-startup=true
