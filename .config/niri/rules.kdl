@@ -43,7 +43,7 @@ window-rule {
 }
 
 window-rule {
-  match app-id="vesktop"
+  match app-id="vesktop || discord"
   open-on-workspace "discord"
   open-maximized true
   // match at-startup=true
