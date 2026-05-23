@@ -45,8 +45,8 @@
     "bar": {
         "autoHideDelay": 500,
         "autoShowDelay": 150,
-        "backgroundOpacity": 0.93,
-        "barType": "floating",
+        "backgroundOpacity": 0.85,
+        "barType": "simple",
         "capsuleColorKey": "none",
         "capsuleOpacity": 1,
         "contentPadding": 2,
@@ -58,7 +58,7 @@
         "frameThickness": 8,
         "hideOnOverview": false,
         "marginHorizontal": 4,
-        "marginVertical": 4,
+        "marginVertical": 3,
         "middleClickAction": "none",
         "middleClickCommand": "",
         "middleClickFollowMouse": false,
@@ -78,7 +78,7 @@
         "showOnWorkspaceSwitch": true,
         "showOutline": false,
         "useSeparateOpacity": false,
-        "widgetSpacing": 10,
+        "widgetSpacing": 6,
         "widgets": {
             "center": [
                 {
@@ -162,7 +162,9 @@
                     "id": "Tray",
                     "pinned": [
                         "steam",
-                        "Discord"
+                        "Discord",
+                        "Vesktop",
+                        "DiscordCanary"
                     ]
                 },
                 {
@@ -485,8 +487,8 @@
         "respectExpireTimeout": false,
         "saveToHistory": {
             "critical": true,
-            "low": false,
-            "normal": false
+            "low": true,
+            "normal": true
         },
         "sounds": {
             "criticalSoundFile": "",
@@ -519,7 +521,7 @@
     "sessionMenu": {
         "countdownDuration": 10000,
         "enableCountdown": false,
-        "largeButtonsLayout": "grid",
+        "largeButtonsLayout": "single-row",
         "largeButtonsStyle": true,
         "position": "center",
         "powerOptions": [
@@ -652,7 +654,7 @@
         "settingsPanelMode": "attached",
         "settingsPanelSideBarCardStyle": false,
         "tooltipsEnabled": true,
-        "translucentWidgets": false
+        "translucentWidgets": true
     },
     "wallpaper": {
         "automationEnabled": false,
@@ -660,6 +662,48 @@
         "enableMultiMonitorDirectories": false,
         "enabled": true,
         "favorites": [
+            {
+                "appearance": "dark",
+                "colorScheme": "Tokyo Night",
+                "darkMode": true,
+                "generationMethod": "tonal-spot",
+                "paletteColors": [
+                    "#7aa2f7",
+                    "#bb9af7",
+                    "#9ece6a",
+                    "#f7768e"
+                ],
+                "path": "/home/samuel/Pictures/wallpapers/wallhaven_g8qzl3.jpg",
+                "useWallpaperColors": false
+            },
+            {
+                "appearance": "dark",
+                "colorScheme": "Tokyo Night",
+                "darkMode": true,
+                "generationMethod": "tonal-spot",
+                "paletteColors": [
+                    "#c0c1ff",
+                    "#c5c4dd",
+                    "#e8b9d4",
+                    "#ffb4ab"
+                ],
+                "path": "/home/samuel/Pictures/wallpapers/wallhaven_eyw5qw.jpg",
+                "useWallpaperColors": true
+            },
+            {
+                "appearance": "dark",
+                "colorScheme": "Tokyo Night",
+                "darkMode": true,
+                "generationMethod": "tonal-spot",
+                "paletteColors": [
+                    "#7aa2f7",
+                    "#bb9af7",
+                    "#9ece6a",
+                    "#f7768e"
+                ],
+                "path": "/home/samuel/Pictures/wallpapers/wallhaven_2y2wg6.jpg",
+                "useWallpaperColors": false
+            }
         ],
         "fillColor": "#000000",
         "fillMode": "crop",
@@ -687,11 +731,11 @@
         "overviewTint": 0.6,
         "panelPosition": "follow_bar",
         "randomIntervalSec": 300,
-        "setWallpaperOnAllMonitors": true,
+        "setWallpaperOnAllMonitors": false,
         "showHiddenFiles": true,
         "skipStartupTransition": false,
         "solidColor": "#1a1a2e",
-        "sortOrder": "name",
+        "sortOrder": "date_desc",
         "transitionDuration": 1500,
         "transitionEdgeSmoothness": 0.05,
         "transitionType": [
@@ -705,17 +749,17 @@
         "useOriginalImages": false,
         "useSolidColor": false,
         "useWallhaven": false,
-        "viewMode": "recursive",
+        "viewMode": "single",
         "wallhavenApiKey": "",
         "wallhavenCategories": "111",
         "wallhavenOrder": "desc",
         "wallhavenPurity": "100",
-        "wallhavenQuery": "",
+        "wallhavenQuery": "nixos",
         "wallhavenRatios": "",
         "wallhavenResolutionHeight": "",
         "wallhavenResolutionMode": "atleast",
         "wallhavenResolutionWidth": "",
-        "wallhavenSorting": "relevance",
+        "wallhavenSorting": "views",
         "wallpaperChangeMode": "random"
     }
 }
