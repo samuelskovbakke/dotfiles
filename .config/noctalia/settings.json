@@ -179,6 +179,12 @@
                     "unreadBadgeColor": "primary"
                 },
                 {
+                    "displayMode": "onhover",
+                    "iconColor": "none",
+                    "id": "Network",
+                    "textColor": "none"
+                },
+                {
                     "displayMode": "alwaysShow",
                     "iconColor": "none",
                     "id": "Volume",
@@ -453,7 +459,7 @@
         "firstDayOfWeek": 1,
         "hideWeatherCityName": false,
         "hideWeatherTimezone": false,
-        "name": "Aarhus",
+        "name": "Sabro",
         "showCalendarEvents": true,
         "showCalendarWeather": true,
         "showWeekNumberInCalendar": true,
