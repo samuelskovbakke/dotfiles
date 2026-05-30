@@ -1,1 +1,13 @@
 .oh-my-zsh/cache/
+
+# Fisher-managed plugin files (reinstall with `fisher update`)
+.config/fish/functions/
+.config/fish/conf.d/
+.config/fish/completions/
+.config/fish/themes/
+.config/fish/fish_variables
+
+# Keep these tracked
+!.config/fish/fish_plugins
+!.config/fish/config.fish
+!.config/fish/functions/your_custom_function.fish  # add any functions YOU wrote
