@@ -71,10 +71,10 @@ sleep 2
 
 # === LAUNCH NATIVE APPS FIRST ===
 log "Launching native applications"
-# vesktop >>$LOGFILE 2>&1 &
 ghostty >>$LOGFILE 2>&1 &
 steam >>$LOGFILE 2>&1 &
-discord >>$LOGFILE 2>&1 &
+vesktop >>$LOGFILE 2>&1 &
+# discord >>$LOGFILE 2>&1 &
 thunderbird >>$LOGFILE 2>&1 &
 
 log "Launching Flatpak applications"
