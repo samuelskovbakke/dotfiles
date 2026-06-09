@@ -20,7 +20,8 @@
         "pinnedApps": [
             "steam",
             "discord",
-            "LocalSend"
+            "LocalSend",
+            "io.missioncenter.MissionCenter"
         ],
         "position": "center",
         "screenshotAnnotationTool": "",
