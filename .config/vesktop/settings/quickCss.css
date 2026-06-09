@@ -1,0 +1,67 @@
+/*@import url("https://raw.githubusercontent.com/DubyaDude/DubyasCleanupOfDiscord/main/DubyasCleanupOfDiscord.css");*/
+/*@import url("https://scattagain.github.io/VencordStuff/css/GuildbarRevert.css");*/ /* old guilds/server list size */
+/* @import url('https://chloecinders.github.io/visual-refresh-compact-title-bar/desktop.css'); */
+@import url('https://chloecinders.github.io/visual-refresh-compact-title-bar/hidden.css'); /* hides the top titlebar */
+
+/* to hide activities themselves */
+[class*='membersGroup']:has([role=button]),
+[class*='member'] [class*='container']:has([class*='badges']) {
+  display: none;
+}
+
+/* Enable clan tag in messages, memebers list, and popout profile view */
+
+div[class^=body_] > span[class^="clickable_"] [role="button"],
+div[class*=compact_] span[class*="clanTagChiplet_"],
+span[class*="clanTagChiplet_"],
+span[class*="clanTag_"]
+{
+    display: inline-flex;
+}
+
+
+/* Idk what it does but it is a part of the "revert to old guilds/server list fix" */
+
+:root {
+    --guildbar-avatar-size: 40px; /*was 48px but guild icons looked zoomed-in*/
+    --blob-scale: 48;
+
+    /* Only include this part if you wish to change these variables */
+    /* You can change the size but only to be less than 48px, you must change the blob scale too */
+    --guildbar-folder-size: var(--guildbar-avatar-size);
+    --folder-blob-scale: var(--blob-scale);
+} 
+
+
+/* Reverts the call/user area */
+/*
+.visual-refresh div[class^="sidebar_"] section[class^="panels_"] {
+    width: calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width) + 1px);
+    left: var(--custom-guild-list-width);
+    bottom: 0px;
+    border-radius: 0px;
+    border: none;
+}
+*/
+.visual-refresh nav[class*=guilds_] {
+  margin-bottom: unset;
+}
+
+/* REMOVE QUICK REACT BAR */
+.button_f7ecac.hoverBarButton_f84418:nth-of-type(1),
+.button_f7ecac.hoverBarButton_f84418:nth-of-type(2),
+.button_f7ecac.hoverBarButton_f84418:nth-of-type(3),
+.separator_f84418 {
+   display: none;
+}
+
+/* Bring back verbose timestamp */
+/*
+span[class*="timestampInline_"] time::before {
+  content: attr(aria-label);
+  font-size: 12px;
+}
+span[class*="timestampInline_"] {
+  font-size: 0px !important;
+}
+*/
