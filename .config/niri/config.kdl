@@ -10,3 +10,4 @@ include "env.kdl"
 
 include "./noctalia.kdl"
 
+include "./animations/swipe-window.kdl"
