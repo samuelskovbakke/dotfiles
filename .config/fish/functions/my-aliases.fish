@@ -15,7 +15,7 @@ alias gg='lazygit'
 
 # Nix
 abbr -a nrs 'sudo nixos-rebuild switch --impure --flake ~/nix-config && home-manager switch --impure --flake ~/nix-config'
-abbr -a nixupg 'nix flake update --flake ~/nix-config && home-manager switch --impure --flake ~/nix-config && sudo nixos-rebuild switch --impure --flake ~/nix-config'
+abbr -a nixupg 'nix flake update --flake ~/nix-config && sudo nixos-rebuild switch --impure --flake ~/nix-config && home-manager switch --impure --flake ~/nix-config'
 abbr -a nixdelgens 'sudo nix-collect-garbage -d && nix-collect-garbage -d'
 
 # Directory shortcuts
