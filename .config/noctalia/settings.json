@@ -21,7 +21,8 @@
             "steam",
             "discord",
             "LocalSend",
-            "io.missioncenter.MissionCenter"
+            "io.missioncenter.MissionCenter",
+            "Keychron Launcher"
         ],
         "position": "center",
         "screenshotAnnotationTool": "",
@@ -154,6 +155,11 @@
             ],
             "right": [
                 {
+                    "defaultSettings": {
+                        "animationsFolder": "~/.config/niri/animations",
+                        "iconColor": "none",
+                        "targetFile": "~/.config/niri/config.kdl"
+                    },
                     "id": "plugin:niri-animation-picker"
                 },
                 {
