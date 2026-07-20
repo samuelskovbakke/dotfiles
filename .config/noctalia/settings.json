@@ -525,7 +525,7 @@
         "overlayLayer": true
     },
     "plugins": {
-        "autoUpdate": false,
+        "autoUpdate": true,
         "notifyUpdates": true
     },
     "sessionMenu": {
@@ -692,9 +692,9 @@
                 "darkMode": true,
                 "generationMethod": "tonal-spot",
                 "paletteColors": [
-                    "#c0c1ff",
-                    "#c5c4dd",
-                    "#e8b9d4",
+                    "#b0c6ff",
+                    "#c0c6dc",
+                    "#e0bbdd",
                     "#ffb4ab"
                 ],
                 "path": "/home/samuel/Pictures/wallpapers/wallhaven_eyw5qw.jpg",
