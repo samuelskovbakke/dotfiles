@@ -14,9 +14,9 @@ alias ff='fastfetch'
 alias gg='lazygit'
 
 # Nix
-abbr -a nrs 'nh switch --impure && nh switch --impure'
-abbr -a nixupg 'nix flake update --flake ~/nix-config && nh switch --impure && nh switch --impure'
-abbr -a nixdelgens 'nh clean all'
+alias nrs 'nh switch --impure && nh os switch --impure'
+abbr -a nixupg 'nix flake update --flake ~/nix-config && nh os switch --impure && nh home switch --impure'
+abbr -a nixdelgens 'nh clean all && nrs'
 
 # Directory shortcuts
 abbr -a md 'mkdir -p'
