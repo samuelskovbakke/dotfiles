@@ -14,7 +14,7 @@ alias ff='fastfetch'
 alias gg='lazygit'
 
 # Nix
-alias nrs 'nh switch --impure && nh os switch --impure'
+alias nrs 'nh os switch --impure && nh home switch --impure'
 abbr -a nixupg 'nix flake update --flake ~/nix-config && nh os switch --impure && nh home switch --impure'
 abbr -a nixdelgens 'nh clean all && nrs'
 
