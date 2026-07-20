@@ -14,9 +14,9 @@ alias ff='fastfetch'
 alias gg='lazygit'
 
 # Nix
-abbr -a nrs 'sudo nixos-rebuild switch --impure --flake ~/nix-config && home-manager switch --impure --flake ~/nix-config'
-abbr -a nixupg 'nix flake update --flake ~/nix-config && sudo nixos-rebuild switch --impure --flake ~/nix-config && home-manager switch --impure --flake ~/nix-config'
-abbr -a nixdelgens 'sudo nix-collect-garbage -d && nix-collect-garbage -d'
+abbr -a nrs 'nh switch --impure && nh switch --impure'
+abbr -a nixupg 'nix flake update --flake ~/nix-config && nh switch --impure && nh switch --impure'
+abbr -a nixdelgens 'nh clean all'
 
 # Directory shortcuts
 abbr -a md 'mkdir -p'
