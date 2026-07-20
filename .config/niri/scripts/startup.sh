@@ -36,7 +36,7 @@ for i in $(seq 1 100); do
 done
 
 log "Waiting for compositor rendering to stabilize..."
-sleep 2
+# sleep 2
 
 log "Core session ready"
 
@@ -61,7 +61,6 @@ systemctl --user start plasma-polkit-agent.service
 
 log "Launching background services"
 # sunsetr >>$LOGFILE 2>&1 &
-openrgb --startminimized -p samuel.orp >>$LOGFILE 2>&1 &
 
 
 # === WAIT LONGER FOR FLATPAK (needs more compositor setup) ===
@@ -71,6 +70,7 @@ sleep 2
 
 # === LAUNCH NATIVE APPS FIRST ===
 log "Launching native applications"
+# openrgb --startminimized -p samuel.orp >>$LOGFILE 2>&1 &
 ghostty >>$LOGFILE 2>&1 &
 steam >>$LOGFILE 2>&1 &
 vesktop >>$LOGFILE 2>&1 &
