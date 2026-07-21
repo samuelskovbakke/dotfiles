@@ -692,13 +692,13 @@
                 "darkMode": true,
                 "generationMethod": "tonal-spot",
                 "paletteColors": [
-                    "#b0c6ff",
-                    "#c0c6dc",
-                    "#e0bbdd",
-                    "#ffb4ab"
+                    "#7aa2f7",
+                    "#bb9af7",
+                    "#9ece6a",
+                    "#f7768e"
                 ],
                 "path": "/home/samuel/Pictures/wallpapers/wallhaven_eyw5qw.jpg",
-                "useWallpaperColors": true
+                "useWallpaperColors": false
             },
             {
                 "appearance": "dark",
@@ -743,7 +743,7 @@
         "randomIntervalSec": 300,
         "setWallpaperOnAllMonitors": false,
         "showHiddenFiles": true,
-        "skipStartupTransition": false,
+        "skipStartupTransition": true,
         "solidColor": "#1a1a2e",
         "sortOrder": "date_desc",
         "transitionDuration": 1500,
