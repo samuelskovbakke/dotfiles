@@ -1,6 +1,6 @@
 if status is-interactive
     set -U fish_greeting ""
-    fastfetch
+    fetch
 
     set -g fish_key_bindings fish_vi_key_bindings
 
