@@ -3,8 +3,9 @@ alias q='exit'
 alias c='clear'
 alias cat='bat'
 alias ls="eza --color=always --git --no-filesize --icons=always --no-time --no-user --no-permissions"
-alias la="eza --long --all --color=always --git --icons=always --no-time --no-user"
-alias l="eza --long --color=always --git --no-filesize --icons=always --no-time --no-user"
+alias l="eza --color=always --git --no-filesize --icons=always --no-time --no-user --no-permissions --long"
+alias la="eza --long --all --color=always --git --icons=always"
+alias ll="eza --long --color=always --git --icons=always"
 alias more='most'
 alias pac='sudo pacman --noconfirm'
 alias yay='yay --noconfirm'
@@ -14,8 +15,8 @@ alias ff='fastfetch'
 alias gg='lazygit'
 
 # Nix
-alias nrs 'nh os switch --impure && nh home switch --impure'
-abbr -a nixupg 'nix flake update --flake ~/nix-config && nh os switch --impure && nh home switch --impure'
+alias nrs 'nh os switch --impure'
+abbr -a nixupg 'nix flake update --flake ~/nix-config && nh os switch --impure'
 abbr -a nixdelgens 'nh clean all && nrs'
 
 # Directory shortcuts
@@ -29,4 +30,16 @@ function d
     else
         dirh | head -n 10
     end
+end
+
+
+for n in (seq 2 10)
+    set dots (string repeat -n $n .)
+    set path (string repeat -n (math "$n - 1") ../)
+
+    eval "
+        function $dots
+            cd $path
+        end
+    "
 end
