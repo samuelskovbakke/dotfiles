@@ -486,7 +486,7 @@
         "forced": false,
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
-        "nightTemp": "2500"
+        "nightTemp": "3007"
     },
     "noctaliaPerformance": {
         "disableDesktopWidgets": true,
@@ -635,34 +635,6 @@
     },
     "templates": {
         "activeTemplates": [
-            {
-                "enabled": true,
-                "id": "niri"
-            },
-            {
-                "enabled": true,
-                "id": "ghostty"
-            },
-            {
-                "enabled": true,
-                "id": "btop"
-            },
-            {
-                "enabled": true,
-                "id": "gtk"
-            },
-            {
-                "enabled": true,
-                "id": "qt"
-            },
-            {
-                "enabled": true,
-                "id": "zenBrowser"
-            },
-            {
-                "enabled": true,
-                "id": "steam"
-            }
         ],
         "enableUserTheming": false
     },
