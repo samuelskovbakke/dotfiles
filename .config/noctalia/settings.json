@@ -19,10 +19,14 @@
         "overviewLayer": true,
         "pinnedApps": [
             "steam",
-            "discord",
             "LocalSend",
             "io.missioncenter.MissionCenter",
-            "Keychron Launcher"
+            "Keychron Launcher",
+            "ftb-app",
+            "amethyst-mod-manager",
+            "org.qbittorrent.qBittorrent",
+            "thunderbird",
+            "vesktop"
         ],
         "position": "center",
         "screenshotAnnotationTool": "",
@@ -174,7 +178,8 @@
                         "steam",
                         "Discord",
                         "Vesktop",
-                        "DiscordCanary"
+                        "DiscordCanary",
+                        "DL speed: 7,6 KiB/s\nUP speed: 1,6 MiB/s"
                     ]
                 },
                 {
@@ -462,7 +467,7 @@
         "bluetoothRssiPollIntervalMs": 60000,
         "bluetoothRssiPollingEnabled": false,
         "disableDiscoverability": false,
-        "networkPanelView": "wifi",
+        "networkPanelView": "ethernet",
         "wifiDetailsViewMode": "list"
     },
     "nightLight": {
@@ -623,31 +628,11 @@
         "activeTemplates": [
             {
                 "enabled": true,
-                "id": "niri"
-            },
-            {
-                "enabled": true,
-                "id": "ghostty"
-            },
-            {
-                "enabled": true,
                 "id": "btop"
             },
             {
                 "enabled": true,
                 "id": "qt"
-            },
-            {
-                "enabled": true,
-                "id": "steam"
-            },
-            {
-                "enabled": true,
-                "id": "zenBrowser"
-            },
-            {
-                "enabled": true,
-                "id": "gtk"
             }
         ],
         "enableUserTheming": false
