@@ -159,14 +159,6 @@
             ],
             "right": [
                 {
-                    "defaultSettings": {
-                        "animationsFolder": "~/.config/niri/animations",
-                        "iconColor": "none",
-                        "targetFile": "~/.config/niri/config.kdl"
-                    },
-                    "id": "plugin:niri-animation-picker"
-                },
-                {
                     "blacklist": [
                     ],
                     "chevronColor": "none",
@@ -246,7 +238,7 @@
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "monitorForColors": "",
-        "predefinedScheme": "Tokyo Night",
+        "predefinedScheme": "Catppuccin Mocha Sapphire",
         "schedulingMode": "off",
         "syncGsettings": true,
         "useWallpaperColors": false
@@ -472,7 +464,7 @@
     },
     "nightLight": {
         "autoSchedule": true,
-        "dayTemp": "4500",
+        "dayTemp": "5000",
         "enabled": true,
         "forced": false,
         "manualSunrise": "06:30",
@@ -626,14 +618,6 @@
     },
     "templates": {
         "activeTemplates": [
-            {
-                "enabled": true,
-                "id": "btop"
-            },
-            {
-                "enabled": true,
-                "id": "qt"
-            }
         ],
         "enableUserTheming": false
     },
@@ -687,14 +671,14 @@
             },
             {
                 "appearance": "dark",
-                "colorScheme": "Tokyo Night",
+                "colorScheme": "Catppuccin Mocha Sapphire",
                 "darkMode": true,
                 "generationMethod": "tonal-spot",
                 "paletteColors": [
-                    "#7aa2f7",
-                    "#bb9af7",
-                    "#9ece6a",
-                    "#f7768e"
+                    "#74c7ec",
+                    "#89b4fa",
+                    "#89dceb",
+                    "#f38ba8"
                 ],
                 "path": "/home/samuel/Pictures/wallpapers/wallhaven_2y2wg6.jpg",
                 "useWallpaperColors": false
