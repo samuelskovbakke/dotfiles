@@ -464,7 +464,7 @@
     },
     "nightLight": {
         "autoSchedule": true,
-        "dayTemp": "5000",
+        "dayTemp": "6500",
         "enabled": true,
         "forced": false,
         "manualSunrise": "06:30",
