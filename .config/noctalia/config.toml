@@ -8,12 +8,33 @@ order = [ "full-size" ]
     background_opacity = 0.69999998435378075
     capsule = true
     center = [ "clock", "workspaces", "weather" ]
-    end = [ "tray", "notifications", "network", "volume", "battery", "keyboard_layout", "session" ]
+    end = [ "tray", "notifications", "group:g2", "control-center" ]
     margin_ends = 0
     padding = 6
     radius_top_left = 0
     radius_top_right = 0
     start = [ "active_window", "media" ]
+
+        [[bar.full-size.capsule_group]]
+        accordion = false
+        accordion_direction = "end"
+        enabled = true
+        fill = "surface_variant"
+        id = "g1"
+        members = [ "volume", "keyboard_layout" ]
+        opacity = 1.0
+        padding = 6.0
+
+        [[bar.full-size.capsule_group]]
+        accordion = false
+        accordion_direction = "end"
+        enabled = true
+        fill = "surface_variant"
+        id = "g2"
+        members = [ "network", "volume", "battery", "keyboard_layout" ]
+        opacity = 1.0
+        padding = 6.0
+        widget_spacing = 12
 
 [calendar]
 
@@ -43,6 +64,9 @@ behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
 
 [location]
 auto_locate = true
+
+[lockscreen]
+monitors = []
 
 [lockscreen_widgets]
 enabled = true
@@ -103,8 +127,11 @@ widget_order = [ "lockscreen-login-box@eDP-1", "lockscreen-widget-00000000000000
 enabled = true
 temperature_night = 2500
 
+[notification]
+keep_dismissed_in_history = false
+
 [plugins]
-enabled = [ "nightwatch75/file-search", "imjustdoingmypart/niri-animations" ]
+enabled = [ "nightwatch75/file-search", "imjustdoingmypart/niri-animations", "samuelskovbakke/calculator-plus" ]
 
 [shell]
 avatar_path = "/home/samuel/avatar.png"
@@ -192,6 +219,10 @@ format = "{:%H:%M %a,  %b %d}"
     middle = "none"
     right = "settings-open-widget"
 
+[widget.control-center]
+glyph = "snowflake"
+icon_color = "#74E1EC"
+
 [widget.media]
 hide_when_no_media = true
 
@@ -201,3 +232,6 @@ drawer_item_size = 18.0
 
 [widget.weather]
 show_condition = false
+
+[widget.widget]
+type = "samuelskovbakke/calculator-plus:widget"
