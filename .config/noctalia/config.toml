@@ -7,7 +7,7 @@ order = [ "full-size" ]
     [bar.full-size]
     background_opacity = 0.69999998435378075
     capsule = true
-    center = [ "clock", "weather", "workspaces" ]
+    center = [ "clock", "workspaces", "weather" ]
     end = [ "tray", "notifications", "group:g1", "control-center" ]
     margin_ends = 0
     padding = 6
@@ -204,13 +204,34 @@ widget_order = [
 enabled = true
 temperature_night = 2500
 
+[osd.kinds]
+media = false
+privacy = false
+
+[plugin_settings."samuelskovbakke/calculator-plus"]
+notify_on_copy = false
+
+[plugin_settings."setyvii/niri-rules-studio"]
+panel_placement = "attached"
+
 [plugins]
-enabled = [ "nightwatch75/file-search", "imjustdoingmypart/niri-animations" ]
+enabled = [ "samuelskovbakke/calculator-plus" ]
+
+    [[plugins.source]]
+    kind = "git"
+    location = "https://github.com/noctalia-dev/official-plugins"
+    name = "official"
+
+    [[plugins.source]]
+    kind = "git"
+    location = "https://github.com/noctalia-dev/community-plugins"
+    name = "community"
 
 [shell]
 avatar_path = "/home/samuel/avatar.png"
 clipboard_enabled = false
 date_format = "%A, %d-%m-%Y"
+font_family = "JetBrainsMonoNL NF"
 polkit_agent = true
 screen_time_enabled = true
 settings_window_translucent = true
@@ -300,14 +321,18 @@ directory = "/home/samuel/Pictures/wallpapers"
 [widget.battery]
 display_mode = "graphic"
 
+[widget.calculator-plus]
+type = "samuelskovbakke/calculator-plus:calculator-plus"
+
 [widget.clock]
-format = "{:%H:%M %a,  %b %d}"
+format = "{:%H:%M %a, %b %d}"
 
     [widget.clock.actions]
     middle = "none"
     right = "settings-open-widget"
 
 [widget.control-center]
+color = "primary"
 glyph = "snowflake"
 
 [widget.media]
@@ -319,3 +344,6 @@ drawer_item_size = 18.0
 
 [widget.weather]
 show_condition = false
+
+[widget.workspaces]
+anchor = true
