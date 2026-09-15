@@ -25,6 +25,10 @@ order = [ "full-size" ]
         opacity = 1.0
         padding = 6.0
 
+[brightness]
+enable_ddcutil = true
+sync_all_monitors = true
+
 [calendar]
 
 [control_center]
@@ -204,6 +208,9 @@ widget_order = [
 enabled = true
 temperature_night = 2500
 
+[notification]
+keep_dismissed_in_history = false
+
 [osd.kinds]
 media = false
 privacy = false
@@ -236,6 +243,9 @@ polkit_agent = true
 screen_time_enabled = true
 settings_window_translucent = true
 
+    [shell.greeter_sync]
+    auto_sync = true
+
     [shell.launcher]
     auto_paste = "ctrl_v"
     pinned = [ "zen-beta", "com.mitchellh.ghostty", "io.missioncenter.MissionCenter" ]
@@ -263,7 +273,7 @@ settings_window_translucent = true
     countdown_seconds = 0.0
     enabled = true
     shortcut = "1"
-    variant = "destructive"
+    variant = "default"
 
     [[shell.session.actions]]
     action = "reboot"
@@ -282,8 +292,18 @@ settings_window_translucent = true
     [[shell.session.actions]]
     action = "logout"
     countdown_seconds = 0.0
-    enabled = false
-    shortcut = "2"
+    enabled = true
+    shortcut = "4"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "command"
+    command = "systemctl reboot --firmware"
+    countdown_seconds = 0.0
+    enabled = true
+    glyph = "cpu"
+    label = "Reboot to BIOS"
+    shortcut = "5"
     variant = "default"
 
     [[shell.session.actions]]
@@ -341,6 +361,7 @@ hide_when_no_media = true
 [widget.tray]
 drawer = true
 drawer_item_size = 18.0
+pinned = [ "steam", "Vesktop" ]
 
 [widget.weather]
 show_condition = false
